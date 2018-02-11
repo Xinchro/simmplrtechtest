@@ -13,7 +13,13 @@ class Calendar extends React.Component {
   render() {
     return (
       <div className="calendar">
-        <button className="waves-effect waves-light btn">button1</button>
+        <button className="waves-effect waves-light btn">
+          <i className="fa fa-chevron-left"></i>
+        </button>
+
+        <button className="waves-effect waves-light btn">
+          <i className="fa fa-chevron-right"></i>
+        </button>
         <MonthGrid />
       </div>
     )
