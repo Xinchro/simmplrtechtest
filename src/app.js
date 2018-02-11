@@ -1,8 +1,10 @@
-import React from 'react';
+import React from 'react'
+
+import MonthGrid from './monthgrid'
 
 class Calendar extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   componentWillMount() {
@@ -12,9 +14,10 @@ class Calendar extends React.Component {
     return (
       <div className="calendar">
         <button className="waves-effect waves-light btn">button1</button>
+        <MonthGrid />
       </div>
-    );
+    )
   }
 }
 
-export default Calendar;
+export default Calendar
