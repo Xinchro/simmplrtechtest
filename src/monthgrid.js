@@ -12,11 +12,12 @@ class MonthGrid extends React.Component {
       let date = i
       if(date<0) date = 31 + date + 1
       if(date>31) date = date - 31
-      arr.push(` [${date}] `)
+      arr.push({ date:date, day:"Monday" })
     }
 
     this.state = {
       current: {
+        month: 1900,
         month: "January",
         date: 1,
         day: "Monday"
@@ -25,11 +26,25 @@ class MonthGrid extends React.Component {
     }
 
     this.state.days = this.setCurrentDays()
+    this.state.current.year = moment().format("YYYY")
     this.state.current.month = moment().format("MMMM")
     this.state.current.date = moment().format("D")
     this.state.current.day = moment().format("dddd")
 
     console.log(this.state.days)
+
+    this.state.listDates = this.state.days.map((date, index) => {
+      return (
+        <li
+          key={`${date.date}${date.day}${index}`}
+          className="monthDay card blue-grey darken-1 col s4 m2">
+          <section className="card-content white-text">
+            <p className="card-title">{date.date}</p>
+            <p>{date.day}</p>
+          </section>
+        </li>
+      )
+    })
   }
 
   setCurrentDays() {
@@ -42,8 +57,9 @@ class MonthGrid extends React.Component {
 
     for(let i=-preDays; i<36-postDays; i++) {
       // +1 because moment is zero indexed, which "adds" 1 to preDays and "removes" to postDays
-      let date = moment().date(i+1).format("D")
-      dates.push(` [${date}] `)
+      const date = moment().date(i+1).format("D")
+      const day = moment().date(i+1).format("dddd")
+      dates.push({ date:date, day: day})
     }
 
     return dates
@@ -54,12 +70,10 @@ class MonthGrid extends React.Component {
 
   render() {
     return (
-      <div className="">
-        <header>{ this.state.current.month }, { this.state.current.date }, { this.state.current.day }</header>
-        <ul className="monthGrid">
-          <li className="monthDay">
-            {this.state.days}
-          </li>
+      <div className="container">
+        <header className="row">{ this.state.current.year }, { this.state.current.month }, { this.state.current.date }, { this.state.current.day }</header>
+        <ul className="monthGrid row col s12">
+          { this.state.listDates }
         </ul>
       </div>
     )
