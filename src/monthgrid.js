@@ -12,7 +12,7 @@ class MonthGrid extends React.Component {
       let date = i
       if(date<0) date = 31 + date + 1
       if(date>31) date = date - 31
-      arr.push({ date:date, day:"Monday" })
+      arr.push({ date:date, day:"Monday", overflow: true })
     }
 
     this.state = {
@@ -31,16 +31,17 @@ class MonthGrid extends React.Component {
     this.state.current.date = moment().format("D")
     this.state.current.day = moment().format("dddd")
 
-    console.log(this.state.days)
-
     this.state.listDates = this.state.days.map((date, index) => {
+      const diff = date.overflow ? "lighten-1" : "darken-1"
+      const classes = `monthDay card blue-grey ${diff} col s4 m2`
       return (
         <li
           key={`${date.date}${date.day}${index}`}
-          className="monthDay card blue-grey darken-1 col s4 m2">
+          className={ classes }
+          >
           <section className="card-content white-text">
-            <p className="card-title">{date.date}</p>
-            <p>{date.day}</p>
+            <p className="card-title">{ date.date }</p>
+            <p>{ date.day }</p>
           </section>
         </li>
       )
@@ -59,7 +60,8 @@ class MonthGrid extends React.Component {
       // +1 because moment is zero indexed, which "adds" 1 to preDays and "removes" to postDays
       const date = moment().date(i+1).format("D")
       const day = moment().date(i+1).format("dddd")
-      dates.push({ date:date, day: day})
+      const overflow = (i<0 || i>=moment().daysInMonth())
+      dates.push({ date:date, day: day, overflow: overflow })
     }
 
     return dates
