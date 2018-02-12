@@ -52,6 +52,9 @@ class Calendar extends React.Component {
         </li>
       )
     })
+
+    this.changeMonth = this.changeMonth.bind(this)
+    this.changeYear = this.changeYear.bind(this)
   }
 
   componentWillMount() {
@@ -74,10 +77,29 @@ class Calendar extends React.Component {
     return dates
   }
 
+  changeMonth(month) {
+    if(month === "prev") {
+      console.log("previous month")
+      return `${this.state.date.current.year}/january`
+    } else
+    if (month === "next") {
+      console.log("next month")
+      return `${this.state.date.current.year}/march`
+    } else {
+      console.log(`chosen month: ${month}`)
+      return `${this.state.date.current.year}/february`
+    }
+  }
+
+  changeYear(year) {
+    console.log(`chosen year: ${month}`)
+    return `1900/${this.state.date.current.month}`
+  }
+
   render() {
     return (
       <div className="calendar">
-        <NavBar year={ this.state.date.current.year } month={ this.state.date.current.month } />
+        <NavBar year={ this.state.date.current.year } month={ this.state.date.current.month } changeMonth={ this.changeMonth } changeYear={ this.changeYear } />
         <MonthGrid date={ this.state.date } />
       </div>
     )

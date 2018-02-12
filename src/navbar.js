@@ -12,36 +12,35 @@ class NavBar extends React.Component {
     return (
       <nav>
         <ul id="monthDropdown" className="dropdown-content">
-          <li><a href="#!">Jan</a></li>
-          <li><a href="#!">Feb</a></li>
-          <li><a href="#!">Feb</a></li>
-          <li><a href="#!">Mar</a></li>
+          <li><a href={ `#!/${this.props.year}/january` }>January</a></li>
+          <li><a href={ `#!/${this.props.year}/february` }>February</a></li>
+          <li><a href={ `#!/${this.props.year}/march` }>March</a></li>
         </ul>
         <ul id="yearDropdown" className="dropdown-content">
-          <li><a href="#!">1900</a></li>
-          <li><a href="#!">1950</a></li>
-          <li><a href="#!">2000</a></li>
+          <li><a href={ `#!/1900/${this.props.month}` }>1900</a></li>
+          <li><a href={ `#!/1950/${this.props.month}` }>1950</a></li>
+          <li><a href={ `#!/2000/${this.props.month}` }>2000</a></li>
         </ul>
-        <div class="nav-wrapper">
-          <ul class="right hide-on-med-and-down">
+        <section className="nav-wrapper">
+          <ul className="right">
             <li>
-              <a href="#!">
-                <i className="fa fa-chevron-left"></i>
+              <a href={ `#!/${this.props.changeMonth("prev")}` }>
+                <i className="material-icons left">chevron_left</i>
               </a>
             </li>
             <li>
               <a className="dropdown-button" href="#!" data-activates="monthDropdown">{ this.props.month }</a>
             </li>
             <li>
-              <a href="#!">
-                <i className="fa fa-chevron-right"></i>
+              <a href={ `#!/${this.props.changeMonth("next")}` }>
+                <i className="material-icons right">chevron_right</i>
               </a>
             </li>
             <li>
               <a className="dropdown-button" href="#!" data-activates="yearDropdown">{ this.props.year }</a>
             </li>
           </ul>
-        </div>
+        </section>
       </nav>
     )
   }
