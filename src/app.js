@@ -76,13 +76,38 @@ class Calendar extends React.Component {
   render() {
     return (
       <div className="calendar">
-        <button className="waves-effect waves-light btn">
-          <i className="fa fa-chevron-left"></i>
-        </button>
-
-        <button className="waves-effect waves-light btn">
-          <i className="fa fa-chevron-right"></i>
-        </button>
+        <ul id="monthDropdown" className="dropdown-content">
+          <li><a href="#!">Jan</a></li>
+          <li><a href="#!">Feb</a></li>
+          <li><a href="#!">Mar</a></li>
+        </ul>
+        <ul id="yearDropdown" className="dropdown-content">
+          <li><a href="#!">1900</a></li>
+          <li><a href="#!">1950</a></li>
+          <li><a href="#!">2000</a></li>
+        </ul>
+        <nav>
+          <div class="nav-wrapper">
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#!">
+                  <i className="fa fa-chevron-left"></i>
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-button" href="#!" data-activates="monthDropdown">{ this.state.date.current.month }</a>
+              </li>
+              <li>
+                <a href="#!">
+                  <i className="fa fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-button" href="#!" data-activates="yearDropdown">{ this.state.date.current.year }</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <MonthGrid date={ this.state.date } />
       </div>
     )
