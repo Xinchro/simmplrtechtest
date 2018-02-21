@@ -14,8 +14,17 @@ class NavBar extends React.Component {
       <nav>
         <ul id="monthDropdown" className="dropdown-content">
           <li><Link to={ `/${this.props.changeMonth("january")}` }>January</Link></li>
-          <li><Link to={ `/${this.props.year}/february` }>February</Link></li>
-          <li><Link to={ `/${this.props.year}/march` }>March</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("february")}` }>February</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("march")}` }>March</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("april")}` }>April</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("may")}` }>May</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("june")}` }>June</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("july")}` }>July</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("august")}` }>August</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("september")}` }>September</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("october")}` }>October</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("november")}` }>November</Link></li>
+          <li><Link to={ `/${this.props.changeMonth("december")}` }>December</Link></li>
         </ul>
         <ul id="yearDropdown" className="dropdown-content">
           <li><Link to={ `/1900/${this.props.month}` }>1900</Link></li>

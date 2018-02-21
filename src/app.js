@@ -58,19 +58,17 @@ class Calendar extends React.Component {
   setCurrentDays(inYear, inMonth) {
     let dates = []
 
-    const month = moment().year(inYear).month(inMonth)
-
-    let preDays = Math.floor((36-month.daysInMonth())/2)
-    let postDays = Math.ceil((36-month.daysInMonth())/2)
+    let preDays = Math.floor((36-moment().year(inYear).month(inMonth).daysInMonth())/2)
+    let postDays = Math.ceil((36-moment().year(inYear).month(inMonth).daysInMonth())/2)
 
     // postDays-(postDays-preDays) to fill out the final day(s)
     // in the case that preDays<postDays
     for(let i=-preDays; i<36-(postDays-(postDays-preDays)); i++) {
       // month starts on 1, 0 is previous month
-      const theDate = month.date(i)
+      const theDate = moment().year(inYear).month(inMonth).date(i)
       const date = theDate.format("D")
       const day = theDate.format("dddd")
-      const overflow = (i<=0 || i>month.daysInMonth())
+      const overflow = (i<=0 || i>moment().year(inYear).month(inMonth).daysInMonth())
       dates.push({ date:date, day: day, overflow: overflow })
     }
 
@@ -107,7 +105,7 @@ class Calendar extends React.Component {
   }
 
   changeMonth(month) {
-    let currentYear = this.props.match.params.year
+    let currentYear = this.props.match.params.year ? this.props.match.params.year : moment().format("YYYY")
     const monthNo = this.props.match.params.month ? parseInt(moment().year(currentYear).month(this.props.match.params.month).format("M")) : moment().format("M")
     
     if(month === "prev") {
