@@ -33,13 +33,10 @@ class Calendar extends React.Component {
     }
 
     // get year from params, if available
-    this.state.date.current.year = props.match.params.year ? props.match.params.year : moment().format("YYYY")
+    let year = props.match.params.year ? props.match.params.year : moment().format("YYYY")
     // get month from params, if available
-    this.state.date.current.month = props.match.params.month ? props.match.params.month : moment().format("MMMM")
-
-    this.state.date.current.date = moment().format("D")
-    this.state.date.current.day = moment().format("dddd")
-    this.state.date.days = this.setCurrentDays(props.match.params.month ? props.match.params.month : moment().format("MMMM"))
+    let month = props.match.params.month ? props.match.params.month : moment().format("MMMM")
+    this.state.date.days = this.setCurrentDays(year, month)
 
 
     this.state.date.listDates = this.state.date.days.map((date, index) => {
@@ -58,28 +55,22 @@ class Calendar extends React.Component {
     this.changeYear = this.changeYear.bind(this)
   }
 
-  componentWillMount() {
-  }
-
-  componentWillReceiveProps(nextProps) {
-  }
-
-  setCurrentDays(inMonth) {
+  setCurrentDays(inYear, inMonth) {
     let dates = []
 
-    const month = moment().month(inMonth)
+    const month = moment().year(inYear).month(inMonth)
 
-    let preDays = Math.floor((36-moment().month(inMonth).daysInMonth())/2)
-    let postDays = Math.ceil((36-moment().month(inMonth).daysInMonth())/2)
+    let preDays = Math.floor((36-month.daysInMonth())/2)
+    let postDays = Math.ceil((36-month.daysInMonth())/2)
 
     // postDays-(postDays-preDays) to fill out the final day(s)
     // in the case that preDays<postDays
     for(let i=-preDays; i<36-(postDays-(postDays-preDays)); i++) {
       // month starts on 1, 0 is previous month
-      const theDate = moment().month(inMonth).date(i)
+      const theDate = month.date(i)
       const date = theDate.format("D")
       const day = theDate.format("dddd")
-      const overflow = (i<=0 || i>moment().month(inMonth).daysInMonth())
+      const overflow = (i<=0 || i>month.daysInMonth())
       dates.push({ date:date, day: day, overflow: overflow })
     }
 
@@ -87,16 +78,19 @@ class Calendar extends React.Component {
   }
 
   getDate() {
+    let currentYear = this.props.match.params.year ? this.props.match.params.year : moment().format("YYYY")
+    let currentMonth = this.props.match.params.month ? this.props.match.params.month : moment().format("MMMM")
+
     let date = {
       current: {
-        year: this.props.match.params.year ? this.props.match.params.year : moment().format("YYYY"),
-        month: this.props.match.params.month ? this.props.match.params.month : moment().format("MMMM"),
+        year: currentYear,
+        month: currentMonth,
         date: moment().format("D"),
         day: moment().format("dddd")
       }
     }
 
-    date.days = this.setCurrentDays(this.props.match.params.month ? this.props.match.params.month : moment().format("MMMM"))
+    date.days = this.setCurrentDays(currentYear, currentMonth)
 
     date.listDates = date.days.map((date, index) => {
       const diff = date.overflow ? "lighten-1" : "darken-1"
@@ -113,17 +107,20 @@ class Calendar extends React.Component {
   }
 
   changeMonth(month) {
+    let currentYear = this.props.match.params.year
+    const monthNo = this.props.match.params.month ? parseInt(moment().year(currentYear).month(this.props.match.params.month).format("M")) : moment().format("M")
+    
     if(month === "prev") {
-      const monthNo = this.props.match.params.month ? parseInt(moment().month(this.props.match.params.month).format("M")) : moment().format("M")
-      const prevMonth = moment().month(monthNo-2).format("MMMM")
-      return `${this.state.date.current.year}/${prevMonth}`
+      const prevMonth = moment().year(currentYear).month(monthNo-2).format("MMMM")
+
+      return `${this.props.match.params.year}/${prevMonth}`
     } else
     if (month === "next") {
-      const monthNo = this.props.match.params.month ? parseInt(moment().month(this.props.match.params.month).format("M")) : moment().format("M")
-      const nextMonth = moment().month(monthNo).format("MMMM")
-      return `${this.state.date.current.year}/${nextMonth}`
+      const nextMonth = moment().year(currentYear).month(monthNo).format("MMMM")
+
+      return `${this.props.match.params.year}/${nextMonth}`
     } else {
-      return `${this.state.date.current.year}/${month}`
+      return `${this.props.match.params.year}/${month}`
     }
   }
 
