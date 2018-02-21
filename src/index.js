@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import App from './app';
+import { HashRouter } from 'react-router-dom'
 
-import { HashRouter } from 'react-router-dom';
+import App from './app'
+import Routes from './routes'
 
 import './index.html'
 
@@ -13,6 +14,8 @@ $(".dropdown-button").dropdown()
 
 ReactDOM.render((
   <HashRouter>
-    <App />
+    <section>
+      <Routes />
+    </section>
   </HashRouter>
-), document.getElementById('root'));
+), document.getElementById('root'))
