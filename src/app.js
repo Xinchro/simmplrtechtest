@@ -3,6 +3,7 @@ import React from 'react'
 import moment from 'moment'
 import MonthGrid from './monthgrid'
 import NavBar from './navbar'
+import Day from './day'
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -41,15 +42,7 @@ class Calendar extends React.Component {
       const classes = `monthDay card blue-grey ${diff} col s4 m2`
 
       return (
-        <li
-          key={`${date.date}${date.day}${index}`}
-          className={ classes }
-          >
-          <section className="card-content white-text">
-            <p className="card-title">{ date.date }</p>
-            <p>{ date.day }</p>
-          </section>
-        </li>
+        <Day date={ date } index={ index } classes={ classes } />
       )
     })
 
