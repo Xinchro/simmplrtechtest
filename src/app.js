@@ -58,14 +58,20 @@ class Calendar extends React.Component {
   setCurrentDays() {
     let dates = []
 
-    const preDays = Math.floor((36-moment().daysInMonth())/2)
-    const postDays = Math.ceil((36-moment().daysInMonth())/2)
+    const currentMonth = moment().month()
+    const month = moment().month(currentMonth)
 
-    for(let i=-preDays; i<36-postDays; i++) {
-      // +1 because moment is zero indexed, which "adds" 1 to preDays and "removes" to postDays
-      const date = moment().date(i+1).format("D")
-      const day = moment().date(i+1).format("dddd")
-      const overflow = (i<0 || i>=moment().daysInMonth())
+    let preDays = Math.floor((36-moment().month(currentMonth).daysInMonth())/2)
+    let postDays = Math.ceil((36-moment().month(currentMonth).daysInMonth())/2)
+
+    // postDays-(postDays-preDays) to fill out the final day(s)
+    // in the case that preDays<postDays
+    for(let i=-preDays; i<36-(postDays-(postDays-preDays)); i++) {
+      // month starts on 1, 0 is previous month
+      const theDate = moment().month(currentMonth).date(i)
+      const date = theDate.format("D")
+      const day = theDate.format("dddd")
+      const overflow = (i<=0 || i>moment().month(currentMonth).daysInMonth())
       dates.push({ date:date, day: day, overflow: overflow })
     }
 
