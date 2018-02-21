@@ -42,7 +42,9 @@ class Calendar extends React.Component {
       const classes = `monthDay card blue-grey ${diff} col s4 m2`
 
       return (
-        <Day date={ date } index={ index } classes={ classes } />
+        <Day 
+          key={`${date.date}${date.day}${index}`}date={ date } 
+          classes={ classes } />
       )
     })
 

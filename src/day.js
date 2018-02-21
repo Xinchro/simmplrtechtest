@@ -11,7 +11,6 @@ class Day extends React.Component {
   render() {
     return (
       <li
-        key={`${this.props.date.date}${this.props.date.day}${this.props.index}`}
         className={ this.props.classes }
         >
         <section className="card-content white-text">
