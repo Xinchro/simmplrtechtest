@@ -10,6 +10,13 @@ class NavBar extends React.Component {
   }
 
   render() {
+    let navLinks = []
+
+    for(let i=0;i<100;i++) {
+      let year = 1950+i
+      navLinks.push(<li key={ `year-${year}` }><Link to={ `/${year}/${this.props.month}` }>{ year }</Link></li>)
+    }
+
     return (
       <nav>
         <ul id="monthDropdown" className="dropdown-content">
@@ -27,9 +34,7 @@ class NavBar extends React.Component {
           <li><Link to={ `/${this.props.changeMonth("december")}` }>December</Link></li>
         </ul>
         <ul id="yearDropdown" className="dropdown-content">
-          <li><Link to={ `/1900/${this.props.month}` }>1900</Link></li>
-          <li><Link to={ `/1950/${this.props.month}` }>1950</Link></li>
-          <li><Link to={ `/2000/${this.props.month}` }>2000</Link></li>
+          { navLinks }
         </ul>
         <section className="nav-wrapper">
           <ul className="right">
