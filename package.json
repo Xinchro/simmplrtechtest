@@ -8,6 +8,13 @@
     "watch:src": "watch-spawn -i -p \"src/**/*.+(js|scss|html)\" npm run build:webpack",
     "host": "http-server -p 8080 ./dist/",
     "start": "run-p host watch:src",
+    "checkghtemp": "git checkout -b ghtemp",
+    "adddist": "git add dist -f",
+    "commitdist": "git commit \"added dist\"",
+    "pushghpages": "git stpp dist github gh-pages",
+    "checkmaster": "git checkout master",
+    "remghtemp": "git branch delete ghtemp -f",
+    "ghpages": "run-s checkghtemp adddist commitdist pushghpages checkmaster remghpages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Walter Reis",
