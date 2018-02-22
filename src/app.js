@@ -108,9 +108,11 @@ class Calendar extends React.Component {
     let currentYear = this.props.match.params.year ? this.props.match.params.year : moment().format("YYYY")
     const monthNo = this.props.match.params.month ? parseInt(moment().year(currentYear).month(this.props.match.params.month).format("M")) : moment().format("M")
 
+    currentYear = parseInt(currentYear)
 
     if(month === "prev") {
       if(monthNo === 1) {
+        if(currentYear === 1950) return "1950/January"
         currentYear--
       }
       const prevMonth = moment().year(currentYear).month(monthNo-2).format("MMMM")
@@ -119,6 +121,7 @@ class Calendar extends React.Component {
     } else
     if (month === "next") {
       if(monthNo === 12) {
+        if(currentYear === 2049) return "2049/December"
         currentYear++
       }
       const nextMonth = moment().year(currentYear).month(monthNo).format("MMMM")

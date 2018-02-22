@@ -12,7 +12,6 @@ class MonthGrid extends React.Component {
   render() {
     return (
       <div className="container">
-        <header className="row">{ this.props.date.current.year }, { this.props.date.current.month }, { this.props.date.current.date }, { this.props.date.current.day }</header>
         <ul className="monthGrid row col s12">
           { this.props.date.listDates }
         </ul>

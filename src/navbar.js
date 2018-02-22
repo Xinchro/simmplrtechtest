@@ -39,12 +39,12 @@ class NavBar extends React.Component {
         <section className="nav-wrapper">
           <ul className="right">
             <li>
+              <Link to="/" className="dropdown-button" data-activates="monthDropdown">{ this.props.month }</Link>
+            </li>
+            <li>
               <Link to={ `/${this.props.changeMonth("prev")}` }>
                 <i className="material-icons left">chevron_left</i>
               </Link>
-            </li>
-            <li>
-              <Link to="/" className="dropdown-button" data-activates="monthDropdown">{ this.props.month }</Link>
             </li>
             <li>
               <Link to={ `/${this.props.changeMonth("next")}` }>
