@@ -10,7 +10,7 @@
     "start": "run-p host watch:src",
     "checkmaster": "git checkout master",
     "splitghtemp": "git subtree split --prefix dist -b ghtemp",
-    "pushghtemp": "git push github gh-pages -f",
+    "pushghtemp": "git push github ghtemp:gh-pages -f",
     "remghtemp": "git branch -D ghtemp",
     "ghpages": "run-s checkmaster splitghtemp pushghtemp checkmaster remghtemp",
     "test": "echo \"Error: no test specified\" && exit 1"
