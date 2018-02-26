@@ -12,6 +12,6 @@ Simple calendar that allows navigation via month/year dropdown and arrows. Highl
 
 `npm run lint` runs the code linter.
 
-`npm run doBuild` runs the build and outputs the bundle to `dist`.
+`npm run build:webpack` runs the build and outputs the bundle to `dist`.
 
 Uses webpack to bundle files.
