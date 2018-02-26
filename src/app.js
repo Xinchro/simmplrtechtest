@@ -92,7 +92,11 @@ class Calendar extends React.Component {
         // get month from params, if available
         const urlMonth = this.props.match.params.month ? this.props.match.params.month : this.getCurrentMonth();
 
-        return { year: urlYear, month: urlMonth };
+
+        return {
+          year: urlYear,
+          month: `${urlMonth[0].toUpperCase()}${urlMonth.slice(1)}` // uppercase first letter of the month
+        };
       } catch(err) {
         console.error(err);// eslint-disable-line
       }
@@ -204,6 +208,8 @@ class Calendar extends React.Component {
 
       return `${currentYear}/${nextMonth}`;
     } else {
+      // uppercase first letter
+      month = `${month[0].toUpperCase()}${month.slice(1)}`;
       return `${this.getUrlParams().year}/${month}`;
     }
   }
