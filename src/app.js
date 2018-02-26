@@ -36,7 +36,7 @@ class Calendar extends React.Component {
     let year = props.match.params.year ? props.match.params.year : moment().format("YYYY")
     // get month from params, if available
     let month = props.match.params.month ? props.match.params.month : moment().format("MMMM")
-    this.state.date.days = this.setCurrentDays(year, month)
+    this.state.date.days = this.getCurrentDays(year, month)
 
 
     this.state.date.listDates = this.state.date.days.map((date, index) => {
@@ -55,7 +55,7 @@ class Calendar extends React.Component {
     this.changeYear = this.changeYear.bind(this)
   }
 
-  setCurrentDays(inYear, inMonth) {
+  getCurrentDays(inYear, inMonth) {
     let dates = []
 
     let preDays = Math.floor((36-moment().year(inYear).month(inMonth).daysInMonth())/2)
@@ -88,7 +88,7 @@ class Calendar extends React.Component {
       }
     }
 
-    date.days = this.setCurrentDays(currentYear, currentMonth)
+    date.days = this.getCurrentDays(currentYear, currentMonth)
 
     date.listDates = date.days.map((date, index) => {
       const diff = date.overflow ? "lighten-1" : "darken-1"
