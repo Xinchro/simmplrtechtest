@@ -6988,17 +6988,7 @@ var Calendar = function (_React$Component) {
       }
     };
 
-    _this.state.date.days = _this.getCurrentDays(_this.getUrlParams().year, _this.getUrlParams().month);
-
-    _this.state.date.listDates = _this.state.date.days.map(function (date, index) {
-      var diff = date.overflow ? "lighten-1" : "darken-1";
-      var color = _this.isCurrentDate(_this.getUrlParams().year, _this.getUrlParams().month, date.date) ? "deep-purple" : "blue-grey";
-      var classes = 'monthDay card ' + color + ' ' + diff + ' col s4 m2';
-
-      return _react2.default.createElement(_day2.default, {
-        key: '' + date.date + date.day + index, date: date,
-        classes: classes });
-    });
+    _this.state.date = _this.getDate();
 
     _this.getDate = _this.getDate.bind(_this);
     _this.changeMonth = _this.changeMonth.bind(_this);
@@ -7023,28 +7013,32 @@ var Calendar = function (_React$Component) {
       var minYear = 1950;
       var maxYear = 2049;
 
-      try {
-        if (!months.includes(this.props.match.params.month)) {
-          throw "Unsupported month!";
-        }
-
-        if (isNaN(parseInt(this.props.match.params.year))) {
-          throw "Unsupported year!";
-        } else {
-          if (parseInt(this.props.match.params.year) < 1950 || parseInt(this.props.match.params.year) > 2049) {
-            throw "Year out of supported range!";
+      // check if year param is defined
+      // only need to check if a year exists (first part of url)
+      if (this.props.match.params.year !== undefined) {
+        try {
+          if (!months.includes(this.props.match.params.month)) {
+            throw "Unsupported month!";
           }
+
+          if (isNaN(parseInt(this.props.match.params.year))) {
+            throw "Unsupported year!";
+          } else {
+            if (parseInt(this.props.match.params.year) < 1950 || parseInt(this.props.match.params.year) > 2049) {
+              throw "Year out of supported range!";
+            }
+          }
+
+          // get year from params, if available
+          var urlYear = this.props.match.params.year ? this.props.match.params.year : this.getCurrentYear();
+
+          // get month from params, if available
+          var urlMonth = this.props.match.params.month ? this.props.match.params.month : this.getCurrentMonth();
+
+          return { year: urlYear, month: urlMonth };
+        } catch (err) {
+          console.error(err);
         }
-
-        // get year from params, if available
-        var urlYear = this.props.match.params.year ? this.props.match.params.year : this.getCurrentYear();
-
-        // get month from params, if available
-        var urlMonth = this.props.match.params.month ? this.props.match.params.month : this.getCurrentMonth();
-
-        return { year: urlYear, month: urlMonth };
-      } catch (err) {
-        console.error(err);
       }
 
       return { year: this.getCurrentYear(), month: this.getCurrentMonth() };
