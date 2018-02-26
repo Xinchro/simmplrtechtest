@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 156);
+/******/ 	return __webpack_require__(__webpack_require__.s = 155);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1911,7 +1911,7 @@ function loadLocale(name) {
         try {
             oldLocale = globalLocale._abbr;
             var aliasedRequire = require;
-            __webpack_require__(197)("./" + name);
+            __webpack_require__(198)("./" + name);
             getSetGlobalLocale(oldLocale);
         } catch (e) {}
     }
@@ -4603,7 +4603,7 @@ return hooks;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(196)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(197)(module)))
 
 /***/ }),
 /* 1 */
@@ -4613,9 +4613,9 @@ return hooks;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(157);
+  module.exports = __webpack_require__(156);
 } else {
-  module.exports = __webpack_require__(158);
+  module.exports = __webpack_require__(157);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
@@ -4904,11 +4904,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(169)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(168)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(170)();
+  module.exports = __webpack_require__(169)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
@@ -5407,65 +5407,6 @@ module.exports = warning;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(168);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(172);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(32);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(174);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(177);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(180);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(182);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(33);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(19);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(188);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(190);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(192);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(193);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(29);
@@ -5538,7 +5479,7 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 };
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5554,7 +5495,7 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(8);
   var warning = __webpack_require__(12);
-  var ReactPropTypesSecret = __webpack_require__(16);
+  var ReactPropTypesSecret = __webpack_require__(15);
   var loggedTypeFailures = {};
 }
 
@@ -5605,7 +5546,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5621,6 +5562,65 @@ module.exports = checkPropTypes;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(167);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(171);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(32);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(173);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(176);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(179);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(181);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(33);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(19);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(187);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(189);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(191);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(192);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /***/ }),
@@ -5933,7 +5933,7 @@ Router.childContextTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -6339,7 +6339,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(161);
+var isTextNode = __webpack_require__(160);
 
 /*eslint-disable no-bitwise */
 
@@ -6919,299 +6919,6 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(13);
-
-var _moment = __webpack_require__(0);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-var _monthgrid = __webpack_require__(198);
-
-var _monthgrid2 = _interopRequireDefault(_monthgrid);
-
-var _navbar = __webpack_require__(199);
-
-var _navbar2 = _interopRequireDefault(_navbar);
-
-var _day = __webpack_require__(200);
-
-var _day2 = _interopRequireDefault(_day);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Calendar = function (_React$Component) {
-  _inherits(Calendar, _React$Component);
-
-  function Calendar(props) {
-    _classCallCheck(this, Calendar);
-
-    // default, temp, calendar structure
-    var _this = _possibleConstructorReturn(this, (Calendar.__proto__ || Object.getPrototypeOf(Calendar)).call(this, props));
-
-    var arr = [];
-    for (var i = -2; i <= 34; i++) {
-      if (i === 0) i++;
-      var date = i;
-      if (date < 0) date = 31 + date + 1;
-      if (date > 31) date = date - 31;
-      arr.push({ date: date, day: "Monday", overflow: true });
-    }
-
-    _this.state = {
-      date: {
-        days: arr,
-        current: {
-          year: 1900,
-          month: "January",
-          date: 1,
-          day: "Monday"
-        }
-      }
-    };
-
-    _this.state.date = _this.getDate();
-
-    _this.getDate = _this.getDate.bind(_this);
-    _this.changeMonth = _this.changeMonth.bind(_this);
-    _this.changeYear = _this.changeYear.bind(_this);
-    return _this;
-  }
-
-  /*
-    Gets the current year
-     @returns string - current year in YYYY format
-  */
-
-
-  _createClass(Calendar, [{
-    key: 'getCurrentYear',
-    value: function getCurrentYear() {
-      return (0, _moment2.default)().format("YYYY");
-    }
-
-    /*
-      Gets the current month
-       @returns string - current year in MMMM format
-    */
-
-  }, {
-    key: 'getCurrentMonth',
-    value: function getCurrentMonth() {
-      return (0, _moment2.default)().format("MMMM");
-    }
-
-    /*
-      Gets the params from the url
-       @returns object - year and month
-    */
-
-  }, {
-    key: 'getUrlParams',
-    value: function getUrlParams() {
-      var months = "JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember";
-      var minYear = 1950;
-      var maxYear = 2049;
-
-      // check if year param is defined
-      // only need to check if a year exists (first part of url)
-      if (this.props.match.params.year !== undefined) {
-        try {
-          // check if url month is a proper month
-          if (!months.includes(this.props.match.params.month)) {
-            throw "Unsupported month!";
-          }
-
-          // check if the url year is a number
-          if (isNaN(parseInt(this.props.match.params.year))) {
-            throw "Unsupported year!";
-          } else {
-            // check if year is in supported range
-            if (parseInt(this.props.match.params.year) < 1950 || parseInt(this.props.match.params.year) > 2049) {
-              throw "Year out of supported range!";
-            }
-          }
-
-          // get year from params, if available
-          var urlYear = this.props.match.params.year ? this.props.match.params.year : this.getCurrentYear();
-
-          // get month from params, if available
-          var urlMonth = this.props.match.params.month ? this.props.match.params.month : this.getCurrentMonth();
-
-          return { year: urlYear, month: urlMonth };
-        } catch (err) {
-          console.error(err);
-        }
-      }
-
-      return { year: this.getCurrentYear(), month: this.getCurrentMonth() };
-    }
-
-    /*
-      Gets the current days to display, including overflow before/after the current month
-       @returns array - dates, including overflow
-    */
-
-  }, {
-    key: 'getCurrentDays',
-    value: function getCurrentDays(inYear, inMonth) {
-      var dates = [];
-
-      // set predays and post days for overflow
-      var preDays = Math.floor((36 - (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth()) / 2);
-      var postDays = Math.ceil((36 - (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth()) / 2);
-
-      // postDays-(postDays-preDays) to fill out the final day(s)
-      // in the case that preDays<postDays
-      for (var i = -preDays; i < 36 - (postDays - (postDays - preDays)); i++) {
-        // month starts on 1, 0 is previous month
-        var theDate = (0, _moment2.default)().year(inYear).month(inMonth).date(i);
-        var date = theDate.format("D");
-        var day = theDate.format("dddd");
-        // overflow if negative or over month limit
-        var overflow = i <= 0 || i > (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth();
-        dates.push({ date: date, day: day, overflow: overflow });
-      }
-
-      return dates;
-    }
-
-    /*
-      Gets an object with the details of the current date (year, month, date and day), including Day component array
-       @returns object - date object for the current state
-    */
-
-  }, {
-    key: 'getDate',
-    value: function getDate() {
-      var _this2 = this;
-
-      var date = {
-        current: {
-          year: this.getUrlParams().year,
-          month: this.getUrlParams().month,
-          date: (0, _moment2.default)().format("D"),
-          day: (0, _moment2.default)().format("dddd")
-        }
-      };
-
-      // set the display days data
-      date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month);
-
-      // create DOM for the display days
-      date.listDates = date.days.map(function (date, index) {
-        var diff = date.overflow ? "lighten-1" : "darken-1";
-        var color = _this2.isCurrentDate(_this2.getUrlParams().year, _this2.getUrlParams().month, date.date) ? "deep-purple" : "blue-grey";
-        var classes = 'monthDay card ' + color + ' ' + diff + ' col s4 m2';
-
-        return _react2.default.createElement(_day2.default, {
-          key: '' + date.date + date.day + index, date: date,
-          classes: classes });
-      });
-
-      return date;
-    }
-
-    /*
-      Checks whether the input date date is the current date
-       @returns boolean - whether the input is the current date
-    */
-
-  }, {
-    key: 'isCurrentDate',
-    value: function isCurrentDate(year, month, date) {
-      var today = (0, _moment2.default)().format();
-      var checkDate = (0, _moment2.default)().year(year).month(month).date(date).format();
-
-      return today === checkDate;
-    }
-
-    /*
-      Changes the current display place to the input month and returns a new url
-       @returns string - new url with current year/month
-    */
-
-  }, {
-    key: 'changeMonth',
-    value: function changeMonth(month) {
-      var currentYear = parseInt(this.getUrlParams().year);
-      // get current month, format it to a number(string) and parse that to a number proper
-      var monthNo = parseInt((0, _moment2.default)().month(this.getUrlParams().month).format("M"));
-
-      // check what kind of "month" we have, if prev/next or actual month
-      if (month === "prev") {
-        if (monthNo === 1) {
-          if (currentYear === 1950) return "1950/January";
-          currentYear--;
-        }
-        var prevMonth = (0, _moment2.default)().year(currentYear).month(monthNo - 2).format("MMMM");
-
-        return currentYear + '/' + prevMonth;
-      } else if (month === "next") {
-        if (monthNo === 12) {
-          if (currentYear === 2049) return "2049/December";
-          currentYear++;
-        }
-        var nextMonth = (0, _moment2.default)().year(currentYear).month(monthNo).format("MMMM");
-
-        return currentYear + '/' + nextMonth;
-      } else {
-        return this.getUrlParams().year + '/' + month;
-      }
-    }
-
-    /*
-      Changes the current display place to the input year and returns a new url
-       @returns string - new url with current year/month
-    */
-
-  }, {
-    key: 'changeYear',
-    value: function changeYear(year) {
-      var month = parseInt((0, _moment2.default)().year(year).month(this.getUrlParams().month).format("M"));
-      return year + '/' + month;
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var date = this.getDate();
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'calendar' },
-        _react2.default.createElement(_navbar2.default, { year: date.current.year, month: date.current.month, changeMonth: this.changeMonth, changeYear: this.changeYear }),
-        _react2.default.createElement(_monthgrid2.default, { date: date })
-      );
-    }
-  }]);
-
-  return Calendar;
-}(_react2.default.Component);
-
-exports.default = Calendar;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
 //! moment.js locale configuration
 //! locale : Afrikaans [af]
 //! author : Werner Mollentze : https://github.com/wernerm
@@ -7288,7 +6995,7 @@ return af;
 
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7436,7 +7143,7 @@ return ar;
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7501,7 +7208,7 @@ return arDz;
 
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7566,7 +7273,7 @@ return arKw;
 
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7698,7 +7405,7 @@ return arLy;
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7764,7 +7471,7 @@ return arMa;
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7875,7 +7582,7 @@ return arSa;
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7940,7 +7647,7 @@ return arTn;
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8051,7 +7758,7 @@ return az;
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8191,7 +7898,7 @@ return be;
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8287,7 +7994,7 @@ return bg;
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8352,7 +8059,7 @@ return bm;
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8477,7 +8184,7 @@ return bn;
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8602,7 +8309,7 @@ return bo;
 
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8716,7 +8423,7 @@ return br;
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8874,7 +8581,7 @@ return bs;
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8968,7 +8675,7 @@ return ca;
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9153,7 +8860,7 @@ return cs;
 
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9222,7 +8929,7 @@ return cv;
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9309,7 +9016,7 @@ return cy;
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9375,7 +9082,7 @@ return da;
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9459,7 +9166,7 @@ return de;
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9544,7 +9251,7 @@ return deAt;
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9628,7 +9335,7 @@ return deCh;
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9734,7 +9441,7 @@ return dv;
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9840,7 +9547,7 @@ return el;
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9913,7 +9620,7 @@ return enAu;
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9982,7 +9689,7 @@ return enCa;
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10055,7 +9762,7 @@ return enGb;
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10128,7 +9835,7 @@ return enIe;
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10201,7 +9908,7 @@ return enNz;
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10280,7 +9987,7 @@ return eo;
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10378,7 +10085,7 @@ return es;
 
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10475,7 +10182,7 @@ return esDo;
 
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10564,7 +10271,7 @@ return esUs;
 
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10651,7 +10358,7 @@ return et;
 
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10723,7 +10430,7 @@ return eu;
 
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10836,7 +10543,7 @@ return fa;
 
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10951,7 +10658,7 @@ return fi;
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11017,7 +10724,7 @@ return fo;
 
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11106,7 +10813,7 @@ return fr;
 
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11186,7 +10893,7 @@ return frCa;
 
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11270,7 +10977,7 @@ return frCh;
 
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11351,7 +11058,7 @@ return fy;
 
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11433,7 +11140,7 @@ return gd;
 
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11516,7 +11223,7 @@ return gl;
 
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11645,7 +11352,7 @@ return gomLatn;
 
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11775,7 +11482,7 @@ return gu;
 
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11880,7 +11587,7 @@ return he;
 
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12010,7 +11717,7 @@ return hi;
 
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12170,7 +11877,7 @@ return hr;
 
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12286,7 +11993,7 @@ return hu;
 
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12387,7 +12094,7 @@ return hyAm;
 
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12476,7 +12183,7 @@ return id;
 
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12614,7 +12321,7 @@ return is;
 
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12690,7 +12397,7 @@ return it;
 
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12776,7 +12483,7 @@ return ja;
 
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12865,7 +12572,7 @@ return jv;
 
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12960,7 +12667,7 @@ return ka;
 
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13053,7 +12760,7 @@ return kk;
 
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13117,7 +12824,7 @@ return km;
 
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13249,7 +12956,7 @@ return kn;
 
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13337,7 +13044,7 @@ return ko;
 
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13431,7 +13138,7 @@ return ky;
 
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13574,7 +13281,7 @@ return lb;
 
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13650,7 +13357,7 @@ return lo;
 
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13774,7 +13481,7 @@ return lt;
 
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13878,7 +13585,7 @@ return lv;
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13996,7 +13703,7 @@ return me;
 
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14066,7 +13773,7 @@ return mi;
 
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14162,7 +13869,7 @@ return mk;
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14249,7 +13956,7 @@ return ml;
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14416,7 +14123,7 @@ return mr;
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14504,7 +14211,7 @@ return ms;
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14593,7 +14300,7 @@ return msMy;
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14659,7 +14366,7 @@ return mt;
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14761,7 +14468,7 @@ return my;
 
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14830,7 +14537,7 @@ return nb;
 
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14959,7 +14666,7 @@ return ne;
 
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15053,7 +14760,7 @@ return nl;
 
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15147,7 +14854,7 @@ return nlBe;
 
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15213,7 +14920,7 @@ return nn;
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15343,7 +15050,7 @@ return paIn;
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15475,7 +15182,7 @@ return pl;
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15546,7 +15253,7 @@ return pt;
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15613,7 +15320,7 @@ return ptBr;
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15695,7 +15402,7 @@ return ro;
 
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15885,7 +15592,7 @@ return ru;
 
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15989,7 +15696,7 @@ return sd;
 
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16056,7 +15763,7 @@ return se;
 
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16133,7 +15840,7 @@ return si;
 
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16296,7 +16003,7 @@ return sk;
 
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16475,7 +16182,7 @@ return sl;
 
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16551,7 +16258,7 @@ return sq;
 
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16668,7 +16375,7 @@ return sr;
 
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16785,7 +16492,7 @@ return srCyrl;
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16880,7 +16587,7 @@ return ss;
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -16955,7 +16662,7 @@ return sv;
 
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17020,7 +16727,7 @@ return sw;
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17156,7 +16863,7 @@ return ta;
 
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17251,7 +16958,7 @@ return te;
 
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17325,7 +17032,7 @@ return tet;
 
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17398,7 +17105,7 @@ return th;
 
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17466,7 +17173,7 @@ return tlPh;
 
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17594,7 +17301,7 @@ return tlh;
 
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17690,7 +17397,7 @@ return tr;
 
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17788,7 +17495,7 @@ return tzl;
 
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17852,7 +17559,7 @@ return tzm;
 
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17916,7 +17623,7 @@ return tzmLatn;
 
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18074,7 +17781,7 @@ return uk;
 
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18179,7 +17886,7 @@ return ur;
 
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18243,7 +17950,7 @@ return uz;
 
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18307,7 +18014,7 @@ return uzLatn;
 
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18392,7 +18099,7 @@ return vi;
 
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18466,7 +18173,7 @@ return xPseudo;
 
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18532,7 +18239,7 @@ return yo;
 
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18649,7 +18356,7 @@ return zhCn;
 
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18760,7 +18467,7 @@ return zhHk;
 
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18870,7 +18577,7 @@ return zhTw;
 
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18880,17 +18587,13 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(159);
+var _reactDom = __webpack_require__(158);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(13);
+var _reactRouterDom = __webpack_require__(16);
 
-var _app = __webpack_require__(36);
-
-var _app2 = _interopRequireDefault(_app);
-
-var _routes = __webpack_require__(201);
+var _routes = __webpack_require__(195);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -18898,20 +18601,20 @@ __webpack_require__(202);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-$(".dropdown-button").dropdown();
+$(".dropdown-button").dropdown(); // eslint-disable-line
 
 _reactDom2.default.render(_react2.default.createElement(
   _reactRouterDom.HashRouter,
   null,
   _react2.default.createElement(
-    'section',
+    "section",
     null,
     _react2.default.createElement(_routes2.default, null)
   )
-), document.getElementById('root'));
+), document.getElementById("root"));
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18939,7 +18642,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18965,7 +18668,7 @@ var emptyObject = __webpack_require__(11);
 var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
 var emptyFunction = __webpack_require__(6);
-var checkPropTypes = __webpack_require__(15);
+var checkPropTypes = __webpack_require__(14);
 
 // TODO: this is special because it gets imported during build.
 
@@ -20304,7 +20007,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20342,15 +20045,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(160);
+  module.exports = __webpack_require__(159);
 } else {
-  module.exports = __webpack_require__(163);
+  module.exports = __webpack_require__(162);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20586,7 +20289,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20601,7 +20304,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(162);
+var isNode = __webpack_require__(161);
 
 /**
  * @param {*} object The object to check.
@@ -20614,7 +20317,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20642,7 +20345,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20675,9 +20378,9 @@ var shallowEqual = __webpack_require__(26);
 var containsNode = __webpack_require__(27);
 var focusNode = __webpack_require__(28);
 var emptyObject = __webpack_require__(11);
-var checkPropTypes = __webpack_require__(15);
-var hyphenateStyleName = __webpack_require__(164);
-var camelizeStyleName = __webpack_require__(166);
+var checkPropTypes = __webpack_require__(14);
+var hyphenateStyleName = __webpack_require__(163);
+var camelizeStyleName = __webpack_require__(165);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -36044,7 +35747,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36059,7 +35762,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(165);
+var hyphenate = __webpack_require__(164);
 
 var msPattern = /^ms-/;
 
@@ -36086,7 +35789,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36122,7 +35825,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36137,7 +35840,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(167);
+var camelize = __webpack_require__(166);
 
 var msPattern = /^-ms-/;
 
@@ -36165,7 +35868,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36200,7 +35903,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36210,7 +35913,7 @@ module.exports = camelize;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36267,7 +35970,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36285,8 +35988,8 @@ var invariant = __webpack_require__(8);
 var warning = __webpack_require__(12);
 var assign = __webpack_require__(7);
 
-var ReactPropTypesSecret = __webpack_require__(16);
-var checkPropTypes = __webpack_require__(15);
+var ReactPropTypesSecret = __webpack_require__(15);
+var checkPropTypes = __webpack_require__(14);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -36817,7 +36520,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36832,7 +36535,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 var emptyFunction = __webpack_require__(6);
 var invariant = __webpack_require__(8);
-var ReactPropTypesSecret = __webpack_require__(16);
+var ReactPropTypesSecret = __webpack_require__(15);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -36882,7 +36585,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37195,7 +36898,7 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37205,7 +36908,7 @@ exports.default = createBrowserHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37261,7 +36964,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37591,18 +37294,18 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(174);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37612,7 +37315,7 @@ exports.default = createHashHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(20);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37669,7 +37372,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37845,7 +37548,7 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 177 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37926,10 +37629,10 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 178 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(179)
+var isarray = __webpack_require__(178)
 
 /**
  * Expose `pathToRegexp`.
@@ -38358,7 +38061,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 179 */
+/* 178 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -38367,18 +38070,18 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(180);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38469,18 +38172,18 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(182);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 183 */
+/* 182 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38492,7 +38195,7 @@ Prompt.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(183);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -38588,17 +38291,17 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 184 */
+/* 183 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(184);
 /* unused harmony reexport createBrowserHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(185);
 /* unused harmony reexport createHashHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(186);
 /* unused harmony reexport createMemoryHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(13);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(10);
@@ -38615,7 +38318,7 @@ Redirect.contextTypes = {
 
 
 /***/ }),
-/* 185 */
+/* 184 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38623,7 +38326,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(35);
@@ -38919,7 +38622,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createBrowserHistory);
 
 /***/ }),
-/* 186 */
+/* 185 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38927,7 +38630,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(35);
@@ -39240,14 +38943,14 @@ var createHashHistory = function createHashHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createHashHistory);
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(22);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -39408,18 +39111,18 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createMemoryHistory);
 
 /***/ }),
-/* 188 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(188);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 189 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39602,18 +39305,18 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(190);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 191 */
+/* 190 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39707,7 +39410,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 192 */
+/* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39718,18 +39421,18 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 193 */
+/* 192 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(193);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 194 */
+/* 193 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39737,7 +39440,7 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(34);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -39774,7 +39477,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 195 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -39852,7 +39555,354 @@ var withRouter = function withRouter(Component) {
 
 
 /***/ }),
+/* 195 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(16);
+
+var _app = __webpack_require__(196);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Routes = function (_React$Component) {
+  _inherits(Routes, _React$Component);
+
+  function Routes(props) {
+    _classCallCheck(this, Routes);
+
+    return _possibleConstructorReturn(this, (Routes.__proto__ || Object.getPrototypeOf(Routes)).call(this, props));
+  }
+
+  _createClass(Routes, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "section",
+        null,
+        _react2.default.createElement(_reactRouterDom.Route, { path: "/:year?/:month?", component: _app2.default })
+      );
+    }
+  }]);
+
+  return Routes;
+}(_react2.default.Component);
+
+exports.default = Routes;
+
+/***/ }),
 /* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _moment = __webpack_require__(0);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _monthgrid = __webpack_require__(199);
+
+var _monthgrid2 = _interopRequireDefault(_monthgrid);
+
+var _navbar = __webpack_require__(200);
+
+var _navbar2 = _interopRequireDefault(_navbar);
+
+var _day = __webpack_require__(201);
+
+var _day2 = _interopRequireDefault(_day);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Calendar = function (_React$Component) {
+  _inherits(Calendar, _React$Component);
+
+  function Calendar(props) {
+    _classCallCheck(this, Calendar);
+
+    // default, temp, calendar structure
+    var _this = _possibleConstructorReturn(this, (Calendar.__proto__ || Object.getPrototypeOf(Calendar)).call(this, props));
+
+    var arr = [];
+    for (var i = -2; i <= 34; i++) {
+      if (i === 0) i++;
+      var date = i;
+      if (date < 0) date = 31 + date + 1;
+      if (date > 31) date = date - 31;
+      arr.push({ date: date, day: "Monday", overflow: true });
+    }
+
+    _this.state = {
+      date: {
+        days: arr,
+        current: {
+          year: 1900,
+          month: "January",
+          date: 1,
+          day: "Monday"
+        }
+      }
+    };
+
+    _this.state.date = _this.getDate();
+
+    _this.getDate = _this.getDate.bind(_this);
+    _this.changeMonth = _this.changeMonth.bind(_this);
+    _this.changeYear = _this.changeYear.bind(_this);
+    return _this;
+  }
+
+  /*
+    Gets the current year
+     @returns string - current year in YYYY format
+  */
+
+
+  _createClass(Calendar, [{
+    key: "getCurrentYear",
+    value: function getCurrentYear() {
+      return (0, _moment2.default)().format("YYYY");
+    }
+
+    /*
+      Gets the current month
+       @returns string - current year in MMMM format
+    */
+
+  }, {
+    key: "getCurrentMonth",
+    value: function getCurrentMonth() {
+      return (0, _moment2.default)().format("MMMM");
+    }
+
+    /*
+      Gets the params from the url
+       @returns object - year and month
+    */
+
+  }, {
+    key: "getUrlParams",
+    value: function getUrlParams() {
+      var months = "JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember";
+      var minYear = 1950;
+      var maxYear = 2049;
+
+      // check if year param is defined
+      // only need to check if a year exists (first part of url)
+      if (this.props.match.params.year !== undefined) {
+        try {
+          // check if url month is a proper month
+          if (!months.includes(this.props.match.params.month)) {
+            throw "Unsupported month!";
+          }
+
+          // check if the url year is a number
+          if (isNaN(parseInt(this.props.match.params.year))) {
+            throw "Unsupported year!";
+          } else {
+            // check if year is in supported range
+            if (parseInt(this.props.match.params.year) < minYear || parseInt(this.props.match.params.year) > maxYear) {
+              throw "Year out of supported range!";
+            }
+          }
+
+          // get year from params, if available
+          var urlYear = this.props.match.params.year ? this.props.match.params.year : this.getCurrentYear();
+
+          // get month from params, if available
+          var urlMonth = this.props.match.params.month ? this.props.match.params.month : this.getCurrentMonth();
+
+          return { year: urlYear, month: urlMonth };
+        } catch (err) {
+          console.error(err); // eslint-disable-line
+        }
+      }
+
+      return { year: this.getCurrentYear(), month: this.getCurrentMonth() };
+    }
+
+    /*
+      Gets the current days to display, including overflow before/after the current month
+       @returns array - dates, including overflow
+    */
+
+  }, {
+    key: "getCurrentDays",
+    value: function getCurrentDays(inYear, inMonth) {
+      var dates = [];
+
+      // set predays and post days for overflow
+      var preDays = Math.floor((36 - (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth()) / 2);
+      var postDays = Math.ceil((36 - (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth()) / 2);
+
+      // postDays-(postDays-preDays) to fill out the final day(s)
+      // in the case that preDays<postDays
+      for (var i = -preDays; i < 36 - (postDays - (postDays - preDays)); i++) {
+        // month starts on 1, 0 is previous month
+        var theDate = (0, _moment2.default)().year(inYear).month(inMonth).date(i);
+        var date = theDate.format("D");
+        var day = theDate.format("dddd");
+        // overflow if negative or over month limit
+        var overflow = i <= 0 || i > (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth();
+        dates.push({ date: date, day: day, overflow: overflow });
+      }
+
+      return dates;
+    }
+
+    /*
+      Gets an object with the details of the current date (year, month, date and day), including Day component array
+       @returns object - date object for the current state
+    */
+
+  }, {
+    key: "getDate",
+    value: function getDate() {
+      var _this2 = this;
+
+      var date = {
+        current: {
+          year: this.getUrlParams().year,
+          month: this.getUrlParams().month,
+          date: (0, _moment2.default)().format("D"),
+          day: (0, _moment2.default)().format("dddd")
+        }
+      };
+
+      // set the display days data
+      date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month);
+
+      // create DOM for the display days
+      date.listDates = date.days.map(function (date, index) {
+        var diff = date.overflow ? "lighten-1" : "darken-1";
+        var color = _this2.isCurrentDate(_this2.getUrlParams().year, _this2.getUrlParams().month, date.date) ? "deep-purple" : "blue-grey";
+        var classes = "monthDay card " + color + " " + diff + " col s4 m2";
+
+        return _react2.default.createElement(_day2.default, {
+          key: "" + date.date + date.day + index, date: date,
+          classes: classes });
+      });
+
+      return date;
+    }
+
+    /*
+      Checks whether the input date date is the current date
+       @returns boolean - whether the input is the current date
+    */
+
+  }, {
+    key: "isCurrentDate",
+    value: function isCurrentDate(year, month, date) {
+      var today = (0, _moment2.default)().format();
+      var checkDate = (0, _moment2.default)().year(year).month(month).date(date).format();
+
+      return today === checkDate;
+    }
+
+    /*
+      Changes the current display place to the input month and returns a new url
+       @returns string - new url with current year/month
+    */
+
+  }, {
+    key: "changeMonth",
+    value: function changeMonth(month) {
+      var currentYear = parseInt(this.getUrlParams().year);
+      // get current month, format it to a number(string) and parse that to a number proper
+      var monthNo = parseInt((0, _moment2.default)().month(this.getUrlParams().month).format("M"));
+
+      // check what kind of "month" we have, if prev/next or actual month
+      if (month === "prev") {
+        if (monthNo === 1) {
+          if (currentYear === 1950) return "1950/January";
+          currentYear--;
+        }
+        var prevMonth = (0, _moment2.default)().year(currentYear).month(monthNo - 2).format("MMMM");
+
+        return currentYear + "/" + prevMonth;
+      } else if (month === "next") {
+        if (monthNo === 12) {
+          if (currentYear === 2049) return "2049/December";
+          currentYear++;
+        }
+        var nextMonth = (0, _moment2.default)().year(currentYear).month(monthNo).format("MMMM");
+
+        return currentYear + "/" + nextMonth;
+      } else {
+        return this.getUrlParams().year + "/" + month;
+      }
+    }
+
+    /*
+      Changes the current display place to the input year and returns a new url
+       @returns string - new url with current year/month
+    */
+
+  }, {
+    key: "changeYear",
+    value: function changeYear(year) {
+      var month = parseInt((0, _moment2.default)().year(year).month(this.getUrlParams().month).format("M"));
+      return year + "/" + month;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var date = this.getDate();
+
+      return _react2.default.createElement(
+        "div",
+        { className: "calendar" },
+        _react2.default.createElement(_navbar2.default, { year: date.current.year, month: date.current.month, changeMonth: this.changeMonth, changeYear: this.changeYear }),
+        _react2.default.createElement(_monthgrid2.default, { date: date })
+      );
+    }
+  }]);
+
+  return Calendar;
+}(_react2.default.Component);
+
+exports.default = Calendar;
+
+/***/ }),
+/* 197 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -39880,248 +39930,248 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 37,
-	"./af.js": 37,
-	"./ar": 38,
-	"./ar-dz": 39,
-	"./ar-dz.js": 39,
-	"./ar-kw": 40,
-	"./ar-kw.js": 40,
-	"./ar-ly": 41,
-	"./ar-ly.js": 41,
-	"./ar-ma": 42,
-	"./ar-ma.js": 42,
-	"./ar-sa": 43,
-	"./ar-sa.js": 43,
-	"./ar-tn": 44,
-	"./ar-tn.js": 44,
-	"./ar.js": 38,
-	"./az": 45,
-	"./az.js": 45,
-	"./be": 46,
-	"./be.js": 46,
-	"./bg": 47,
-	"./bg.js": 47,
-	"./bm": 48,
-	"./bm.js": 48,
-	"./bn": 49,
-	"./bn.js": 49,
-	"./bo": 50,
-	"./bo.js": 50,
-	"./br": 51,
-	"./br.js": 51,
-	"./bs": 52,
-	"./bs.js": 52,
-	"./ca": 53,
-	"./ca.js": 53,
-	"./cs": 54,
-	"./cs.js": 54,
-	"./cv": 55,
-	"./cv.js": 55,
-	"./cy": 56,
-	"./cy.js": 56,
-	"./da": 57,
-	"./da.js": 57,
-	"./de": 58,
-	"./de-at": 59,
-	"./de-at.js": 59,
-	"./de-ch": 60,
-	"./de-ch.js": 60,
-	"./de.js": 58,
-	"./dv": 61,
-	"./dv.js": 61,
-	"./el": 62,
-	"./el.js": 62,
-	"./en-au": 63,
-	"./en-au.js": 63,
-	"./en-ca": 64,
-	"./en-ca.js": 64,
-	"./en-gb": 65,
-	"./en-gb.js": 65,
-	"./en-ie": 66,
-	"./en-ie.js": 66,
-	"./en-nz": 67,
-	"./en-nz.js": 67,
-	"./eo": 68,
-	"./eo.js": 68,
-	"./es": 69,
-	"./es-do": 70,
-	"./es-do.js": 70,
-	"./es-us": 71,
-	"./es-us.js": 71,
-	"./es.js": 69,
-	"./et": 72,
-	"./et.js": 72,
-	"./eu": 73,
-	"./eu.js": 73,
-	"./fa": 74,
-	"./fa.js": 74,
-	"./fi": 75,
-	"./fi.js": 75,
-	"./fo": 76,
-	"./fo.js": 76,
-	"./fr": 77,
-	"./fr-ca": 78,
-	"./fr-ca.js": 78,
-	"./fr-ch": 79,
-	"./fr-ch.js": 79,
-	"./fr.js": 77,
-	"./fy": 80,
-	"./fy.js": 80,
-	"./gd": 81,
-	"./gd.js": 81,
-	"./gl": 82,
-	"./gl.js": 82,
-	"./gom-latn": 83,
-	"./gom-latn.js": 83,
-	"./gu": 84,
-	"./gu.js": 84,
-	"./he": 85,
-	"./he.js": 85,
-	"./hi": 86,
-	"./hi.js": 86,
-	"./hr": 87,
-	"./hr.js": 87,
-	"./hu": 88,
-	"./hu.js": 88,
-	"./hy-am": 89,
-	"./hy-am.js": 89,
-	"./id": 90,
-	"./id.js": 90,
-	"./is": 91,
-	"./is.js": 91,
-	"./it": 92,
-	"./it.js": 92,
-	"./ja": 93,
-	"./ja.js": 93,
-	"./jv": 94,
-	"./jv.js": 94,
-	"./ka": 95,
-	"./ka.js": 95,
-	"./kk": 96,
-	"./kk.js": 96,
-	"./km": 97,
-	"./km.js": 97,
-	"./kn": 98,
-	"./kn.js": 98,
-	"./ko": 99,
-	"./ko.js": 99,
-	"./ky": 100,
-	"./ky.js": 100,
-	"./lb": 101,
-	"./lb.js": 101,
-	"./lo": 102,
-	"./lo.js": 102,
-	"./lt": 103,
-	"./lt.js": 103,
-	"./lv": 104,
-	"./lv.js": 104,
-	"./me": 105,
-	"./me.js": 105,
-	"./mi": 106,
-	"./mi.js": 106,
-	"./mk": 107,
-	"./mk.js": 107,
-	"./ml": 108,
-	"./ml.js": 108,
-	"./mr": 109,
-	"./mr.js": 109,
-	"./ms": 110,
-	"./ms-my": 111,
-	"./ms-my.js": 111,
-	"./ms.js": 110,
-	"./mt": 112,
-	"./mt.js": 112,
-	"./my": 113,
-	"./my.js": 113,
-	"./nb": 114,
-	"./nb.js": 114,
-	"./ne": 115,
-	"./ne.js": 115,
-	"./nl": 116,
-	"./nl-be": 117,
-	"./nl-be.js": 117,
-	"./nl.js": 116,
-	"./nn": 118,
-	"./nn.js": 118,
-	"./pa-in": 119,
-	"./pa-in.js": 119,
-	"./pl": 120,
-	"./pl.js": 120,
-	"./pt": 121,
-	"./pt-br": 122,
-	"./pt-br.js": 122,
-	"./pt.js": 121,
-	"./ro": 123,
-	"./ro.js": 123,
-	"./ru": 124,
-	"./ru.js": 124,
-	"./sd": 125,
-	"./sd.js": 125,
-	"./se": 126,
-	"./se.js": 126,
-	"./si": 127,
-	"./si.js": 127,
-	"./sk": 128,
-	"./sk.js": 128,
-	"./sl": 129,
-	"./sl.js": 129,
-	"./sq": 130,
-	"./sq.js": 130,
-	"./sr": 131,
-	"./sr-cyrl": 132,
-	"./sr-cyrl.js": 132,
-	"./sr.js": 131,
-	"./ss": 133,
-	"./ss.js": 133,
-	"./sv": 134,
-	"./sv.js": 134,
-	"./sw": 135,
-	"./sw.js": 135,
-	"./ta": 136,
-	"./ta.js": 136,
-	"./te": 137,
-	"./te.js": 137,
-	"./tet": 138,
-	"./tet.js": 138,
-	"./th": 139,
-	"./th.js": 139,
-	"./tl-ph": 140,
-	"./tl-ph.js": 140,
-	"./tlh": 141,
-	"./tlh.js": 141,
-	"./tr": 142,
-	"./tr.js": 142,
-	"./tzl": 143,
-	"./tzl.js": 143,
-	"./tzm": 144,
-	"./tzm-latn": 145,
-	"./tzm-latn.js": 145,
-	"./tzm.js": 144,
-	"./uk": 146,
-	"./uk.js": 146,
-	"./ur": 147,
-	"./ur.js": 147,
-	"./uz": 148,
-	"./uz-latn": 149,
-	"./uz-latn.js": 149,
-	"./uz.js": 148,
-	"./vi": 150,
-	"./vi.js": 150,
-	"./x-pseudo": 151,
-	"./x-pseudo.js": 151,
-	"./yo": 152,
-	"./yo.js": 152,
-	"./zh-cn": 153,
-	"./zh-cn.js": 153,
-	"./zh-hk": 154,
-	"./zh-hk.js": 154,
-	"./zh-tw": 155,
-	"./zh-tw.js": 155
+	"./af": 36,
+	"./af.js": 36,
+	"./ar": 37,
+	"./ar-dz": 38,
+	"./ar-dz.js": 38,
+	"./ar-kw": 39,
+	"./ar-kw.js": 39,
+	"./ar-ly": 40,
+	"./ar-ly.js": 40,
+	"./ar-ma": 41,
+	"./ar-ma.js": 41,
+	"./ar-sa": 42,
+	"./ar-sa.js": 42,
+	"./ar-tn": 43,
+	"./ar-tn.js": 43,
+	"./ar.js": 37,
+	"./az": 44,
+	"./az.js": 44,
+	"./be": 45,
+	"./be.js": 45,
+	"./bg": 46,
+	"./bg.js": 46,
+	"./bm": 47,
+	"./bm.js": 47,
+	"./bn": 48,
+	"./bn.js": 48,
+	"./bo": 49,
+	"./bo.js": 49,
+	"./br": 50,
+	"./br.js": 50,
+	"./bs": 51,
+	"./bs.js": 51,
+	"./ca": 52,
+	"./ca.js": 52,
+	"./cs": 53,
+	"./cs.js": 53,
+	"./cv": 54,
+	"./cv.js": 54,
+	"./cy": 55,
+	"./cy.js": 55,
+	"./da": 56,
+	"./da.js": 56,
+	"./de": 57,
+	"./de-at": 58,
+	"./de-at.js": 58,
+	"./de-ch": 59,
+	"./de-ch.js": 59,
+	"./de.js": 57,
+	"./dv": 60,
+	"./dv.js": 60,
+	"./el": 61,
+	"./el.js": 61,
+	"./en-au": 62,
+	"./en-au.js": 62,
+	"./en-ca": 63,
+	"./en-ca.js": 63,
+	"./en-gb": 64,
+	"./en-gb.js": 64,
+	"./en-ie": 65,
+	"./en-ie.js": 65,
+	"./en-nz": 66,
+	"./en-nz.js": 66,
+	"./eo": 67,
+	"./eo.js": 67,
+	"./es": 68,
+	"./es-do": 69,
+	"./es-do.js": 69,
+	"./es-us": 70,
+	"./es-us.js": 70,
+	"./es.js": 68,
+	"./et": 71,
+	"./et.js": 71,
+	"./eu": 72,
+	"./eu.js": 72,
+	"./fa": 73,
+	"./fa.js": 73,
+	"./fi": 74,
+	"./fi.js": 74,
+	"./fo": 75,
+	"./fo.js": 75,
+	"./fr": 76,
+	"./fr-ca": 77,
+	"./fr-ca.js": 77,
+	"./fr-ch": 78,
+	"./fr-ch.js": 78,
+	"./fr.js": 76,
+	"./fy": 79,
+	"./fy.js": 79,
+	"./gd": 80,
+	"./gd.js": 80,
+	"./gl": 81,
+	"./gl.js": 81,
+	"./gom-latn": 82,
+	"./gom-latn.js": 82,
+	"./gu": 83,
+	"./gu.js": 83,
+	"./he": 84,
+	"./he.js": 84,
+	"./hi": 85,
+	"./hi.js": 85,
+	"./hr": 86,
+	"./hr.js": 86,
+	"./hu": 87,
+	"./hu.js": 87,
+	"./hy-am": 88,
+	"./hy-am.js": 88,
+	"./id": 89,
+	"./id.js": 89,
+	"./is": 90,
+	"./is.js": 90,
+	"./it": 91,
+	"./it.js": 91,
+	"./ja": 92,
+	"./ja.js": 92,
+	"./jv": 93,
+	"./jv.js": 93,
+	"./ka": 94,
+	"./ka.js": 94,
+	"./kk": 95,
+	"./kk.js": 95,
+	"./km": 96,
+	"./km.js": 96,
+	"./kn": 97,
+	"./kn.js": 97,
+	"./ko": 98,
+	"./ko.js": 98,
+	"./ky": 99,
+	"./ky.js": 99,
+	"./lb": 100,
+	"./lb.js": 100,
+	"./lo": 101,
+	"./lo.js": 101,
+	"./lt": 102,
+	"./lt.js": 102,
+	"./lv": 103,
+	"./lv.js": 103,
+	"./me": 104,
+	"./me.js": 104,
+	"./mi": 105,
+	"./mi.js": 105,
+	"./mk": 106,
+	"./mk.js": 106,
+	"./ml": 107,
+	"./ml.js": 107,
+	"./mr": 108,
+	"./mr.js": 108,
+	"./ms": 109,
+	"./ms-my": 110,
+	"./ms-my.js": 110,
+	"./ms.js": 109,
+	"./mt": 111,
+	"./mt.js": 111,
+	"./my": 112,
+	"./my.js": 112,
+	"./nb": 113,
+	"./nb.js": 113,
+	"./ne": 114,
+	"./ne.js": 114,
+	"./nl": 115,
+	"./nl-be": 116,
+	"./nl-be.js": 116,
+	"./nl.js": 115,
+	"./nn": 117,
+	"./nn.js": 117,
+	"./pa-in": 118,
+	"./pa-in.js": 118,
+	"./pl": 119,
+	"./pl.js": 119,
+	"./pt": 120,
+	"./pt-br": 121,
+	"./pt-br.js": 121,
+	"./pt.js": 120,
+	"./ro": 122,
+	"./ro.js": 122,
+	"./ru": 123,
+	"./ru.js": 123,
+	"./sd": 124,
+	"./sd.js": 124,
+	"./se": 125,
+	"./se.js": 125,
+	"./si": 126,
+	"./si.js": 126,
+	"./sk": 127,
+	"./sk.js": 127,
+	"./sl": 128,
+	"./sl.js": 128,
+	"./sq": 129,
+	"./sq.js": 129,
+	"./sr": 130,
+	"./sr-cyrl": 131,
+	"./sr-cyrl.js": 131,
+	"./sr.js": 130,
+	"./ss": 132,
+	"./ss.js": 132,
+	"./sv": 133,
+	"./sv.js": 133,
+	"./sw": 134,
+	"./sw.js": 134,
+	"./ta": 135,
+	"./ta.js": 135,
+	"./te": 136,
+	"./te.js": 136,
+	"./tet": 137,
+	"./tet.js": 137,
+	"./th": 138,
+	"./th.js": 138,
+	"./tl-ph": 139,
+	"./tl-ph.js": 139,
+	"./tlh": 140,
+	"./tlh.js": 140,
+	"./tr": 141,
+	"./tr.js": 141,
+	"./tzl": 142,
+	"./tzl.js": 142,
+	"./tzm": 143,
+	"./tzm-latn": 144,
+	"./tzm-latn.js": 144,
+	"./tzm.js": 143,
+	"./uk": 145,
+	"./uk.js": 145,
+	"./ur": 146,
+	"./ur.js": 146,
+	"./uz": 147,
+	"./uz-latn": 148,
+	"./uz-latn.js": 148,
+	"./uz.js": 147,
+	"./vi": 149,
+	"./vi.js": 149,
+	"./x-pseudo": 150,
+	"./x-pseudo.js": 150,
+	"./yo": 151,
+	"./yo.js": 151,
+	"./zh-cn": 152,
+	"./zh-cn.js": 152,
+	"./zh-hk": 153,
+	"./zh-hk.js": 153,
+	"./zh-tw": 154,
+	"./zh-tw.js": 154
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -40137,10 +40187,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 197;
+webpackContext.id = 198;
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40155,10 +40205,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _moment = __webpack_require__(0);
-
-var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40178,14 +40224,14 @@ var MonthGrid = function (_React$Component) {
   }
 
   _createClass(MonthGrid, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'container' },
+        "div",
+        { className: "container" },
         _react2.default.createElement(
-          'ul',
-          { className: 'monthGrid row col s12' },
+          "ul",
+          { className: "monthGrid row col s12" },
           this.props.date.listDates
         )
       );
@@ -40198,7 +40244,7 @@ var MonthGrid = function (_React$Component) {
 exports.default = MonthGrid;
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40214,7 +40260,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(13);
+var _reactRouterDom = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40234,7 +40280,7 @@ var NavBar = function (_React$Component) {
   }
 
   _createClass(NavBar, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       var navLinks = [];
 
@@ -40242,183 +40288,183 @@ var NavBar = function (_React$Component) {
       for (var i = 0; i < 100; i++) {
         var year = 1950 + i;
         navLinks.push(_react2.default.createElement(
-          'li',
-          { key: 'year-' + year },
+          "li",
+          { key: "year-" + year },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/' + year + '/' + this.props.month },
+            { to: "/" + year + "/" + this.props.month },
             year
           )
         ));
       }
 
       return _react2.default.createElement(
-        'nav',
+        "nav",
         null,
         _react2.default.createElement(
-          'ul',
-          { id: 'monthDropdown', className: 'dropdown-content' },
+          "ul",
+          { id: "monthDropdown", className: "dropdown-content" },
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("january") },
-              'January'
+              { to: "/" + this.props.changeMonth("january") },
+              "January"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("february") },
-              'February'
+              { to: "/" + this.props.changeMonth("february") },
+              "February"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("march") },
-              'March'
+              { to: "/" + this.props.changeMonth("march") },
+              "March"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("april") },
-              'April'
+              { to: "/" + this.props.changeMonth("april") },
+              "April"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("may") },
-              'May'
+              { to: "/" + this.props.changeMonth("may") },
+              "May"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("june") },
-              'June'
+              { to: "/" + this.props.changeMonth("june") },
+              "June"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("july") },
-              'July'
+              { to: "/" + this.props.changeMonth("july") },
+              "July"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("august") },
-              'August'
+              { to: "/" + this.props.changeMonth("august") },
+              "August"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("september") },
-              'September'
+              { to: "/" + this.props.changeMonth("september") },
+              "September"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("october") },
-              'October'
+              { to: "/" + this.props.changeMonth("october") },
+              "October"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("november") },
-              'November'
+              { to: "/" + this.props.changeMonth("november") },
+              "November"
             )
           ),
           _react2.default.createElement(
-            'li',
+            "li",
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' + this.props.changeMonth("december") },
-              'December'
+              { to: "/" + this.props.changeMonth("december") },
+              "December"
             )
           )
         ),
         _react2.default.createElement(
-          'ul',
-          { id: 'yearDropdown', className: 'dropdown-content' },
+          "ul",
+          { id: "yearDropdown", className: "dropdown-content" },
           navLinks
         ),
         _react2.default.createElement(
-          'section',
-          { className: 'nav-wrapper' },
+          "section",
+          { className: "nav-wrapper" },
           _react2.default.createElement(
-            'ul',
-            { className: 'right' },
+            "ul",
+            { className: "right" },
             _react2.default.createElement(
-              'li',
+              "li",
               null,
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/', className: 'dropdown-button', 'data-activates': 'monthDropdown' },
+                { to: "/", className: "dropdown-button", "data-activates": "monthDropdown" },
                 this.props.month
               )
             ),
             _react2.default.createElement(
-              'li',
+              "li",
               null,
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/' + this.props.changeMonth("prev") },
+                { to: "/" + this.props.changeMonth("prev") },
                 _react2.default.createElement(
-                  'i',
-                  { className: 'material-icons left' },
-                  'chevron_left'
+                  "i",
+                  { className: "material-icons left" },
+                  "chevron_left"
                 )
               )
             ),
             _react2.default.createElement(
-              'li',
+              "li",
               null,
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/' + this.props.changeMonth("next") },
+                { to: "/" + this.props.changeMonth("next") },
                 _react2.default.createElement(
-                  'i',
-                  { className: 'material-icons right' },
-                  'chevron_right'
+                  "i",
+                  { className: "material-icons right" },
+                  "chevron_right"
                 )
               )
             ),
             _react2.default.createElement(
-              'li',
+              "li",
               null,
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/', className: 'dropdown-button', 'data-activates': 'yearDropdown' },
+                { to: "/", className: "dropdown-button", "data-activates": "yearDropdown" },
                 this.props.year
               )
             )
@@ -40434,7 +40480,7 @@ var NavBar = function (_React$Component) {
 exports.default = NavBar;
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40497,62 +40543,6 @@ var Day = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Day;
-
-/***/ }),
-/* 201 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(13);
-
-var _app = __webpack_require__(36);
-
-var _app2 = _interopRequireDefault(_app);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Routes = function (_React$Component) {
-  _inherits(Routes, _React$Component);
-
-  function Routes(props) {
-    _classCallCheck(this, Routes);
-
-    return _possibleConstructorReturn(this, (Routes.__proto__ || Object.getPrototypeOf(Routes)).call(this, props));
-  }
-
-  _createClass(Routes, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'section',
-        null,
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/:year?/:month?', component: _app2.default })
-      );
-    }
-  }]);
-
-  return Routes;
-}(_react2.default.Component);
-
-exports.default = Routes;
 
 /***/ }),
 /* 202 */
