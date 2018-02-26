@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:webpack": "webpack --config webpack.config.js",
-    "watch:src": "watch-spawn -i -p \"src/**/*.+(js|scss|html)\" npm run build:webpack",
+    "lint": "eslint ./src/**/*.js",
+    "doBuild": "run-s lint build:webpack",
+    "watch:src": "watch-spawn -i -p \"src/**/*.+(js|scss|html)\" npm run doBuild",
     "host": "http-server -p 8080 ./dist/",
     "start": "run-p host watch:src",
     "checkmaster": "git checkout master",
@@ -29,6 +31,7 @@
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^4.18.1",
     "moment-timezone": "^0.5.14",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
