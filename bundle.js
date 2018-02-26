@@ -40079,9 +40079,6 @@ var MonthGrid = function (_React$Component) {
   }
 
   _createClass(MonthGrid, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {}
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -40138,9 +40135,6 @@ var NavBar = function (_React$Component) {
   }
 
   _createClass(NavBar, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {}
-  }, {
     key: 'render',
     value: function render() {
       var navLinks = [];
@@ -40374,9 +40368,6 @@ var Day = function (_React$Component) {
   }
 
   _createClass(Day, [{
-    key: "componentWillMount",
-    value: function componentWillMount() {}
-  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -40448,9 +40439,6 @@ var Routes = function (_React$Component) {
   }
 
   _createClass(Routes, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {}
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
