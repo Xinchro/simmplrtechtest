@@ -9,6 +9,7 @@ class NavBar extends React.Component {
   render() {
     let navLinks = []
 
+    // fill out years from 1950 to 2049(+99)
     for(let i=0;i<100;i++) {
       let year = 1950+i
       navLinks.push(<li key={ `year-${year}` }><Link to={ `/${year}/${this.props.month}` }>{ year }</Link></li>)

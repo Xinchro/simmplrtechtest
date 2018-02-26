@@ -39,14 +39,29 @@ class Calendar extends React.Component {
     this.changeYear = this.changeYear.bind(this)
   }
 
+  /*
+    Gets the current year
+
+    @returns string - current year in YYYY format
+  */
   getCurrentYear() {
     return moment().format("YYYY")
   }
 
+  /*
+    Gets the current month
+
+    @returns string - current year in MMMM format
+  */
   getCurrentMonth() {
     return moment().format("MMMM")
   }
 
+  /*
+    Gets the params from the url
+
+    @returns object - year and month
+  */
   getUrlParams() {
     const months = "JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember"
     const minYear = 1950
@@ -56,13 +71,16 @@ class Calendar extends React.Component {
     // only need to check if a year exists (first part of url)
     if(this.props.match.params.year !== undefined) {
       try {
+        // check if url month is a proper month
         if(!months.includes(this.props.match.params.month)) {
           throw "Unsupported month!"
         }
 
+        // check if the url year is a number
         if(isNaN(parseInt(this.props.match.params.year))) {
           throw "Unsupported year!"
         } else {
+          // check if year is in supported range
           if(parseInt(this.props.match.params.year) < 1950
              || parseInt(this.props.match.params.year) > 2049) {
             throw "Year out of supported range!"
@@ -84,9 +102,15 @@ class Calendar extends React.Component {
     return { year: this.getCurrentYear(), month: this.getCurrentMonth() }
   }
 
+  /*
+    Gets the current days to display, including overflow before/after the current month
+
+    @returns array - dates, including overflow
+  */
   getCurrentDays(inYear, inMonth) {
     let dates = []
 
+    // set predays and post days for overflow
     let preDays = Math.floor((36-moment().year(inYear).month(inMonth).daysInMonth())/2)
     let postDays = Math.ceil((36-moment().year(inYear).month(inMonth).daysInMonth())/2)
 
@@ -97,6 +121,7 @@ class Calendar extends React.Component {
       const theDate = moment().year(inYear).month(inMonth).date(i)
       const date = theDate.format("D")
       const day = theDate.format("dddd")
+      // overflow if negative or over month limit
       const overflow = (i<=0 || i>moment().year(inYear).month(inMonth).daysInMonth())
       dates.push({ date:date, day: day, overflow: overflow })
     }
@@ -104,6 +129,11 @@ class Calendar extends React.Component {
     return dates
   }
 
+  /*
+    Gets an object with the details of the current date (year, month, date and day), including Day component array
+
+    @returns object - date object for the current state
+  */
   getDate() {
     let date = {
       current: {
@@ -114,8 +144,10 @@ class Calendar extends React.Component {
       }
     }
 
+    // set the display days data
     date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month)
 
+    // create DOM for the display days
     date.listDates = date.days.map((date, index) => {
       const diff = date.overflow ? "lighten-1" : "darken-1"
       const color = this.isCurrentDate(this.getUrlParams().year, this.getUrlParams().month, date.date) ? "deep-purple" : "blue-grey"
@@ -131,6 +163,11 @@ class Calendar extends React.Component {
     return date
   }
 
+  /*
+    Checks whether the input date date is the current date
+
+    @returns boolean - whether the input is the current date
+  */
   isCurrentDate(year, month, date) {
     const today = moment().format()
     const checkDate = moment().year(year).month(month).date(date).format()
@@ -138,12 +175,18 @@ class Calendar extends React.Component {
     return (today === checkDate)
   }
 
+
+  /*
+    Changes the current display place to the input month and returns a new url
+
+    @returns string - new url with current year/month
+  */
   changeMonth(month) {
-    let currentYear = this.props.match.params.year ? this.props.match.params.year : moment().format("YYYY")
-    const monthNo = this.props.match.params.month ? parseInt(moment().year(currentYear).month(this.props.match.params.month).format("M")) : moment().format("M")
+    let currentYear = parseInt(this.getUrlParams().year)
+    // get current month, format it to a number(string) and parse that to a number proper
+    const monthNo = parseInt(moment().month(this.getUrlParams().month).format("M"))
 
-    currentYear = parseInt(currentYear)
-
+    // check what kind of "month" we have, if prev/next or actual month
     if(month === "prev") {
       if(monthNo === 1) {
         if(currentYear === 1950) return "1950/January"
@@ -162,12 +205,18 @@ class Calendar extends React.Component {
 
       return `${currentYear}/${nextMonth}`
     } else {
-      return `${this.props.match.params.year}/${month}`
+      return `${this.getUrlParams().year}/${month}`
     }
   }
 
+  /*
+    Changes the current display place to the input year and returns a new url
+
+    @returns string - new url with current year/month
+  */
   changeYear(year) {
-    return `${year}/${this.props.match.params.month ? parseInt(moment().month(this.props.match.params.month).format("M")) : moment().month()}`
+    const month = parseInt(moment().year(year).month(this.getUrlParams().month).format("M"))
+    return `${year}/${month}`
   }
 
   render() {
