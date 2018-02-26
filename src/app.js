@@ -91,7 +91,7 @@ class Calendar extends React.Component {
     date.days = this.getCurrentDays(currentYear, currentMonth)
 
     date.listDates = date.days.map((date, index) => {
-      const diff = date.overflow ? "lighten-1" : "darken-1"
+      const diff = date.overflow ? "lighten-1" : (this.isCurrentDate(currentYear, currentMonth, date.date) ? "darken-2" : "darken-1")
       const classes = `monthDay card blue-grey ${diff} col s4 m2`
 
       return (
@@ -102,6 +102,13 @@ class Calendar extends React.Component {
     })
 
     return date
+  }
+
+  isCurrentDate(year, month, date) {
+    const today = moment().format()
+    const checkDate = moment().year(year).month(month).date(date).format()
+
+    return (today === checkDate)
   }
 
   changeMonth(month) {
