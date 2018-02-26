@@ -7032,6 +7032,8 @@ var Calendar = function (_React$Component) {
   }, {
     key: 'getDate',
     value: function getDate() {
+      var _this2 = this;
+
       var currentYear = this.props.match.params.year ? this.props.match.params.year : (0, _moment2.default)().format("YYYY");
       var currentMonth = this.props.match.params.month ? this.props.match.params.month : (0, _moment2.default)().format("MMMM");
 
@@ -7047,7 +7049,7 @@ var Calendar = function (_React$Component) {
       date.days = this.getCurrentDays(currentYear, currentMonth);
 
       date.listDates = date.days.map(function (date, index) {
-        var diff = date.overflow ? "lighten-1" : "darken-1";
+        var diff = date.overflow ? "lighten-1" : _this2.isCurrentDate(currentYear, currentMonth, date.date) ? "darken-2" : "darken-1";
         var classes = 'monthDay card blue-grey ' + diff + ' col s4 m2';
 
         return _react2.default.createElement(_day2.default, {
@@ -7056,6 +7058,14 @@ var Calendar = function (_React$Component) {
       });
 
       return date;
+    }
+  }, {
+    key: 'isCurrentDate',
+    value: function isCurrentDate(year, month, date) {
+      var today = (0, _moment2.default)().format();
+      var checkDate = (0, _moment2.default)().year(year).month(month).date(date).format();
+
+      return today === checkDate;
     }
   }, {
     key: 'changeMonth',
