@@ -6,9 +6,6 @@ class NavBar extends React.Component {
     super(props)
   }
 
-  componentWillMount() {
-  }
-
   render() {
     let navLinks = []
 
