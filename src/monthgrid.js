@@ -1,9 +1,9 @@
-import React from 'react'
-import moment from 'moment'
+import React from 'react';
+import moment from 'moment';
 
 class MonthGrid extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {

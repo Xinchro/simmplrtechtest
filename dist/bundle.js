@@ -7111,9 +7111,10 @@ var Calendar = function (_React$Component) {
           date: (0, _moment2.default)().format("D"),
           day: (0, _moment2.default)().format("dddd")
         }
+      };
 
-        // set the display days data
-      };date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month);
+      // set the display days data
+      date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month);
 
       // create DOM for the display days
       date.listDates = date.days.map(function (date, index) {
