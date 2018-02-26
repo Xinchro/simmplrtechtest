@@ -6986,16 +6986,13 @@ var Calendar = function (_React$Component) {
           day: "Monday"
         }
       }
+    };
 
-      // get year from params, if available
-    };var year = props.match.params.year ? props.match.params.year : (0, _moment2.default)().format("YYYY");
-    // get month from params, if available
-    var month = props.match.params.month ? props.match.params.month : (0, _moment2.default)().format("MMMM");
-    _this.state.date.days = _this.getCurrentDays(year, month);
+    _this.state.date.days = _this.getCurrentDays(_this.getUrlParams().year, _this.getUrlParams().month);
 
     _this.state.date.listDates = _this.state.date.days.map(function (date, index) {
       var diff = date.overflow ? "lighten-1" : "darken-1";
-      var color = _this.isCurrentDate(year, month, date.date) ? "deep-purple" : "blue-grey";
+      var color = _this.isCurrentDate(_this.getUrlParams().year, _this.getUrlParams().month, date.date) ? "deep-purple" : "blue-grey";
       var classes = 'monthDay card ' + color + ' ' + diff + ' col s4 m2';
 
       return _react2.default.createElement(_day2.default, {
@@ -7010,6 +7007,49 @@ var Calendar = function (_React$Component) {
   }
 
   _createClass(Calendar, [{
+    key: 'getCurrentYear',
+    value: function getCurrentYear() {
+      return (0, _moment2.default)().format("YYYY");
+    }
+  }, {
+    key: 'getCurrentMonth',
+    value: function getCurrentMonth() {
+      return (0, _moment2.default)().format("MMMM");
+    }
+  }, {
+    key: 'getUrlParams',
+    value: function getUrlParams() {
+      var months = "JanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecember";
+      var minYear = 1950;
+      var maxYear = 2049;
+
+      try {
+        if (!months.includes(this.props.match.params.month)) {
+          throw "Unsupported month!";
+        }
+
+        if (isNaN(parseInt(this.props.match.params.year))) {
+          throw "Unsupported year!";
+        } else {
+          if (parseInt(this.props.match.params.year) < 1950 || parseInt(this.props.match.params.year) > 2049) {
+            throw "Year out of supported range!";
+          }
+        }
+
+        // get year from params, if available
+        var urlYear = this.props.match.params.year ? this.props.match.params.year : this.getCurrentYear();
+
+        // get month from params, if available
+        var urlMonth = this.props.match.params.month ? this.props.match.params.month : this.getCurrentMonth();
+
+        return { year: urlYear, month: urlMonth };
+      } catch (err) {
+        console.error(err);
+      }
+
+      return { year: this.getCurrentYear(), month: this.getCurrentMonth() };
+    }
+  }, {
     key: 'getCurrentDays',
     value: function getCurrentDays(inYear, inMonth) {
       var dates = [];
@@ -7035,23 +7075,20 @@ var Calendar = function (_React$Component) {
     value: function getDate() {
       var _this2 = this;
 
-      var currentYear = this.props.match.params.year ? this.props.match.params.year : (0, _moment2.default)().format("YYYY");
-      var currentMonth = this.props.match.params.month ? this.props.match.params.month : (0, _moment2.default)().format("MMMM");
-
       var date = {
         current: {
-          year: currentYear,
-          month: currentMonth,
+          year: this.getUrlParams().year,
+          month: this.getUrlParams().month,
           date: (0, _moment2.default)().format("D"),
           day: (0, _moment2.default)().format("dddd")
         }
       };
 
-      date.days = this.getCurrentDays(currentYear, currentMonth);
+      date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month);
 
       date.listDates = date.days.map(function (date, index) {
         var diff = date.overflow ? "lighten-1" : "darken-1";
-        var color = _this2.isCurrentDate(currentYear, currentMonth, date.date) ? "deep-purple" : "blue-grey";
+        var color = _this2.isCurrentDate(_this2.getUrlParams().year, _this2.getUrlParams().month, date.date) ? "deep-purple" : "blue-grey";
         var classes = 'monthDay card ' + color + ' ' + diff + ' col s4 m2';
 
         return _react2.default.createElement(_day2.default, {
