@@ -6996,16 +6996,34 @@ var Calendar = function (_React$Component) {
     return _this;
   }
 
+  /*
+    Gets the current year
+     @returns string - current year in YYYY format
+  */
+
+
   _createClass(Calendar, [{
     key: 'getCurrentYear',
     value: function getCurrentYear() {
       return (0, _moment2.default)().format("YYYY");
     }
+
+    /*
+      Gets the current month
+       @returns string - current year in MMMM format
+    */
+
   }, {
     key: 'getCurrentMonth',
     value: function getCurrentMonth() {
       return (0, _moment2.default)().format("MMMM");
     }
+
+    /*
+      Gets the params from the url
+       @returns object - year and month
+    */
+
   }, {
     key: 'getUrlParams',
     value: function getUrlParams() {
@@ -7017,13 +7035,16 @@ var Calendar = function (_React$Component) {
       // only need to check if a year exists (first part of url)
       if (this.props.match.params.year !== undefined) {
         try {
+          // check if url month is a proper month
           if (!months.includes(this.props.match.params.month)) {
             throw "Unsupported month!";
           }
 
+          // check if the url year is a number
           if (isNaN(parseInt(this.props.match.params.year))) {
             throw "Unsupported year!";
           } else {
+            // check if year is in supported range
             if (parseInt(this.props.match.params.year) < 1950 || parseInt(this.props.match.params.year) > 2049) {
               throw "Year out of supported range!";
             }
@@ -7043,11 +7064,18 @@ var Calendar = function (_React$Component) {
 
       return { year: this.getCurrentYear(), month: this.getCurrentMonth() };
     }
+
+    /*
+      Gets the current days to display, including overflow before/after the current month
+       @returns array - dates, including overflow
+    */
+
   }, {
     key: 'getCurrentDays',
     value: function getCurrentDays(inYear, inMonth) {
       var dates = [];
 
+      // set predays and post days for overflow
       var preDays = Math.floor((36 - (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth()) / 2);
       var postDays = Math.ceil((36 - (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth()) / 2);
 
@@ -7058,12 +7086,19 @@ var Calendar = function (_React$Component) {
         var theDate = (0, _moment2.default)().year(inYear).month(inMonth).date(i);
         var date = theDate.format("D");
         var day = theDate.format("dddd");
+        // overflow if negative or over month limit
         var overflow = i <= 0 || i > (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth();
         dates.push({ date: date, day: day, overflow: overflow });
       }
 
       return dates;
     }
+
+    /*
+      Gets an object with the details of the current date (year, month, date and day), including Day component array
+       @returns object - date object for the current state
+    */
+
   }, {
     key: 'getDate',
     value: function getDate() {
@@ -7076,10 +7111,11 @@ var Calendar = function (_React$Component) {
           date: (0, _moment2.default)().format("D"),
           day: (0, _moment2.default)().format("dddd")
         }
-      };
 
-      date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month);
+        // set the display days data
+      };date.days = this.getCurrentDays(this.getUrlParams().year, this.getUrlParams().month);
 
+      // create DOM for the display days
       date.listDates = date.days.map(function (date, index) {
         var diff = date.overflow ? "lighten-1" : "darken-1";
         var color = _this2.isCurrentDate(_this2.getUrlParams().year, _this2.getUrlParams().month, date.date) ? "deep-purple" : "blue-grey";
@@ -7092,6 +7128,12 @@ var Calendar = function (_React$Component) {
 
       return date;
     }
+
+    /*
+      Checks whether the input date date is the current date
+       @returns boolean - whether the input is the current date
+    */
+
   }, {
     key: 'isCurrentDate',
     value: function isCurrentDate(year, month, date) {
@@ -7100,14 +7142,20 @@ var Calendar = function (_React$Component) {
 
       return today === checkDate;
     }
+
+    /*
+      Changes the current display place to the input month and returns a new url
+       @returns string - new url with current year/month
+    */
+
   }, {
     key: 'changeMonth',
     value: function changeMonth(month) {
-      var currentYear = this.props.match.params.year ? this.props.match.params.year : (0, _moment2.default)().format("YYYY");
-      var monthNo = this.props.match.params.month ? parseInt((0, _moment2.default)().year(currentYear).month(this.props.match.params.month).format("M")) : (0, _moment2.default)().format("M");
+      var currentYear = parseInt(this.getUrlParams().year);
+      // get current month, format it to a number(string) and parse that to a number proper
+      var monthNo = parseInt((0, _moment2.default)().month(this.getUrlParams().month).format("M"));
 
-      currentYear = parseInt(currentYear);
-
+      // check what kind of "month" we have, if prev/next or actual month
       if (month === "prev") {
         if (monthNo === 1) {
           if (currentYear === 1950) return "1950/January";
@@ -7125,13 +7173,20 @@ var Calendar = function (_React$Component) {
 
         return currentYear + '/' + nextMonth;
       } else {
-        return this.props.match.params.year + '/' + month;
+        return this.getUrlParams().year + '/' + month;
       }
     }
+
+    /*
+      Changes the current display place to the input year and returns a new url
+       @returns string - new url with current year/month
+    */
+
   }, {
     key: 'changeYear',
     value: function changeYear(year) {
-      return year + '/' + (this.props.match.params.month ? parseInt((0, _moment2.default)().month(this.props.match.params.month).format("M")) : (0, _moment2.default)().month());
+      var month = parseInt((0, _moment2.default)().year(year).month(this.getUrlParams().month).format("M"));
+      return year + '/' + month;
     }
   }, {
     key: 'render',
@@ -40182,6 +40237,7 @@ var NavBar = function (_React$Component) {
     value: function render() {
       var navLinks = [];
 
+      // fill out years from 1950 to 2049(+99)
       for (var i = 0; i < 100; i++) {
         var year = 1950 + i;
         navLinks.push(_react2.default.createElement(
