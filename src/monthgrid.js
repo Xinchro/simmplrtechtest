@@ -1,5 +1,4 @@
-import React from 'react';
-import moment from 'moment';
+import React from "react";
 
 class MonthGrid extends React.Component {
   constructor(props) {
@@ -13,7 +12,7 @@ class MonthGrid extends React.Component {
           { this.props.date.listDates }
         </ul>
       </div>
-    )
+    );
   }
 }
 

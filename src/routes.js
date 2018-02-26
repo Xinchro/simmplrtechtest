@@ -1,7 +1,7 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React from "react";
+import { Route } from "react-router-dom";
 
-import App from './app';
+import App from "./app";
 
 class Routes extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Routes extends React.Component {
       <section>
         <Route path="/:year?/:month?" component={ App }/>
       </section>
-    )
+    );
   }
 }
 

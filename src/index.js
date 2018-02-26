@@ -1,16 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import { HashRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 
-import App from './app';
-import Routes from './routes';
+import Routes from "./routes";
 
-import './index.html';
-
+import "./index.html";
 
 
-$(".dropdown-button").dropdown();
+
+$(".dropdown-button").dropdown();// eslint-disable-line
 
 ReactDOM.render((
   <HashRouter>
@@ -18,4 +17,4 @@ ReactDOM.render((
       <Routes />
     </section>
   </HashRouter>
-), document.getElementById('root'));
+), document.getElementById("root"));

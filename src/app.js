@@ -1,10 +1,9 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React from "react";
 
-import moment from 'moment';
-import MonthGrid from './monthgrid';
-import NavBar from './navbar';
-import Day from './day';
+import moment from "moment";
+import MonthGrid from "./monthgrid";
+import NavBar from "./navbar";
+import Day from "./day";
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -81,8 +80,8 @@ class Calendar extends React.Component {
           throw "Unsupported year!";
         } else {
           // check if year is in supported range
-          if(parseInt(this.props.match.params.year) < 1950
-             || parseInt(this.props.match.params.year) > 2049) {
+          if(parseInt(this.props.match.params.year) < minYear
+             || parseInt(this.props.match.params.year) > maxYear) {
             throw "Year out of supported range!";
           }
         }
@@ -95,7 +94,7 @@ class Calendar extends React.Component {
 
         return { year: urlYear, month: urlMonth };
       } catch(err) {
-        console.error(err);
+        console.error(err);// eslint-disable-line
       }
     }
 
@@ -189,7 +188,7 @@ class Calendar extends React.Component {
     // check what kind of "month" we have, if prev/next or actual month
     if(month === "prev") {
       if(monthNo === 1) {
-        if(currentYear === 1950) return "1950/January"
+        if(currentYear === 1950) return "1950/January";
         currentYear--;
       }
       const prevMonth = moment().year(currentYear).month(monthNo-2).format("MMMM");
@@ -198,7 +197,7 @@ class Calendar extends React.Component {
     } else
     if (month === "next") {
       if(monthNo === 12) {
-        if(currentYear === 2049) return "2049/December"
+        if(currentYear === 2049) return "2049/December";
         currentYear++;
       }
       const nextMonth = moment().year(currentYear).month(monthNo).format("MMMM");
