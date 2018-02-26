@@ -39729,7 +39729,7 @@ var Calendar = function (_React$Component) {
       if (this.props.match.params.year !== undefined) {
         try {
           // check if url month is a proper month
-          if (!months.includes(this.props.match.params.month)) {
+          if (!months.toLowerCase().includes(this.props.match.params.month.toLowerCase())) {
             throw "Unsupported month!";
           }
 
