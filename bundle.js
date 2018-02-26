@@ -6995,7 +6995,8 @@ var Calendar = function (_React$Component) {
 
     _this.state.date.listDates = _this.state.date.days.map(function (date, index) {
       var diff = date.overflow ? "lighten-1" : "darken-1";
-      var classes = 'monthDay card blue-grey ' + diff + ' col s4 m2';
+      var color = _this.isCurrentDate(year, month, date.date) ? "deep-purple" : "blue-grey";
+      var classes = 'monthDay card ' + color + ' ' + diff + ' col s4 m2';
 
       return _react2.default.createElement(_day2.default, {
         key: '' + date.date + date.day + index, date: date,
@@ -7049,8 +7050,9 @@ var Calendar = function (_React$Component) {
       date.days = this.getCurrentDays(currentYear, currentMonth);
 
       date.listDates = date.days.map(function (date, index) {
-        var diff = date.overflow ? "lighten-1" : _this2.isCurrentDate(currentYear, currentMonth, date.date) ? "darken-2" : "darken-1";
-        var classes = 'monthDay card blue-grey ' + diff + ' col s4 m2';
+        var diff = date.overflow ? "lighten-1" : "darken-1";
+        var color = _this2.isCurrentDate(currentYear, currentMonth, date.date) ? "deep-purple" : "blue-grey";
+        var classes = 'monthDay card ' + color + ' ' + diff + ' col s4 m2';
 
         return _react2.default.createElement(_day2.default, {
           key: '' + date.date + date.day + index, date: date,
