@@ -6991,7 +6991,7 @@ var Calendar = function (_React$Component) {
     };var year = props.match.params.year ? props.match.params.year : (0, _moment2.default)().format("YYYY");
     // get month from params, if available
     var month = props.match.params.month ? props.match.params.month : (0, _moment2.default)().format("MMMM");
-    _this.state.date.days = _this.setCurrentDays(year, month);
+    _this.state.date.days = _this.getCurrentDays(year, month);
 
     _this.state.date.listDates = _this.state.date.days.map(function (date, index) {
       var diff = date.overflow ? "lighten-1" : "darken-1";
@@ -7009,8 +7009,8 @@ var Calendar = function (_React$Component) {
   }
 
   _createClass(Calendar, [{
-    key: 'setCurrentDays',
-    value: function setCurrentDays(inYear, inMonth) {
+    key: 'getCurrentDays',
+    value: function getCurrentDays(inYear, inMonth) {
       var dates = [];
 
       var preDays = Math.floor((36 - (0, _moment2.default)().year(inYear).month(inMonth).daysInMonth()) / 2);
@@ -7044,7 +7044,7 @@ var Calendar = function (_React$Component) {
         }
       };
 
-      date.days = this.setCurrentDays(currentYear, currentMonth);
+      date.days = this.getCurrentDays(currentYear, currentMonth);
 
       date.listDates = date.days.map(function (date, index) {
         var diff = date.overflow ? "lighten-1" : "darken-1";
